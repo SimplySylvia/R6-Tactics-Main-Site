@@ -9,6 +9,10 @@ class Atkop extends Component {
 
          <div className="card-content black-text">
            <p>{this.props.atkop.name}</p>
+           <p>{this.props.atkop.ArmorRating}</p>
+           <p>{this.props.atkop.SpeedRating}</p>
+           <p>{this.props.atkop.gadget.name}</p>
+           <p>{this.props.atkop.gadget.name.uses}</p>
          </div>
        </div>
      </div>

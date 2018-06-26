@@ -6,22 +6,22 @@ class OpsContainer extends Component{
     constructor(){
         super()
         this.state = {
-          Atkops: [],
+          atkops: [],
           editingAtkopId: null,
           editing: false
         }
       }
-      
-    
+
       componentDidMount(){
         this.fetchData()
       }
     
       fetchData(){
         AtkopModel.all().then( (res) => {
+          console.log('Here is the res:',res)
           this.setState ({
-            Atkops: res.data.Atkops,
-            Atkop: ''
+            atkops: res.data,
+            atkop: ''
           })
         })
       }
@@ -29,7 +29,8 @@ class OpsContainer extends Component{
     render(){
       return (
         <div className='opscontainer'>
-        <Atkops atkops={this.state.Atkops}/>
+        {console.log('logged atk:',this.state.atkops)}
+        <Atkops atkops={this.state.atkops}/>
         
 
         </div>
