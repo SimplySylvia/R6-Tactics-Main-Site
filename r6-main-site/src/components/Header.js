@@ -10,7 +10,7 @@ class Header extends Component{
           <div className="nav-wrapper">
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li><Link to={'/'}>Home</Link></li>
-              <li>Ops</li>
+              <li><Link to={'/ops'}>Ops</Link></li>
             </ul>
           </div>
         </nav>
