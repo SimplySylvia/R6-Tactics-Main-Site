@@ -12,7 +12,10 @@ class Atkops extends Component {
     
     return(
       <div className="atkops">
+      <div className="atkHeader">
       <h3>Atk Ops</h3>
+      </div>
+      
       <div className="opsList">
         {atkops}
         </div>

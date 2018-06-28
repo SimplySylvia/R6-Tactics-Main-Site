@@ -64,6 +64,16 @@ nav {
   padding: .5em;
 }
 
+.btn {
+  background-color: #36a9e0;
+}
+
+.atkHeader {
+  background: #9B391D;
+}
+.atkHeader h3{
+  margin: 0;
+}
 /* Op Card */
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
@@ -79,7 +89,10 @@ nav {
   padding-bottom: 40px;
   margin: 2em;
 }
-
+ li {
+   text-align: left;
+   font-size: 1.3em;
+ }
 
 
 .clash-card {
@@ -97,7 +110,6 @@ nav {
 .clash-card__image {
   position: relative;
   height: 230px;
-  margin-bottom: 35px;
 }
 
 .clash-card__image--barbarian {
@@ -114,25 +126,24 @@ nav {
 
 .clash-card__level {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   margin-bottom: 3px;
+  margin-top: 10px;
 }
-
+.clash-card__gadget-title {
+  font-size: 1.3em;
+  color: black;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
 .clash-card__unit-name {
-  font-size: 26px;
+  font-size: 2em;
   color: black;
   font-weight: 900;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
-
-.clash-card__unit-description {
-  padding: 20px;
-  margin-bottom: 10px;  
-}
-
-
-
 
 .clash-card__unit-stats {
   color: white;
@@ -148,14 +159,6 @@ nav {
 .one-half {
   width: 50%;
   float: left;
-  padding: 20px 15px;
-}
-
-sup {
-  position: absolute;
-  bottom: 4px; 
-  font-size: 45%;
-  margin-left: 2px;
 }
 
 .stat {

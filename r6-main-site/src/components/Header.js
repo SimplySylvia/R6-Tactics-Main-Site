@@ -9,9 +9,9 @@ class Header extends Component{
         <nav>
           <div className="nav-wrapper">
           <a className="brand-logo">R6 Tactics</a>
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-              <li><Link to={'/'}>Home</Link></li>
-              <li><Link to={'/ops'}>Ops</Link></li>
+            <ul id="nav-mobile" className="right">
+              <li className="waves-effect waves-light btn"><Link to={'/'}>Home</Link></li>
+              <li className="waves-effect waves-light btn"><Link to={'/ops'}>Ops</Link></li>
             </ul>
           </div>
         </nav>
