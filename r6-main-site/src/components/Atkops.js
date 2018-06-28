@@ -13,7 +13,9 @@ class Atkops extends Component {
     return(
       <div className="atkops">
       <h3>Atk Ops</h3>
+      <div className="opsList">
         {atkops}
+        </div>
       </div>
     )
   }

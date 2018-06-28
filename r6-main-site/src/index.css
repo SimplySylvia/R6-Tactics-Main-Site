@@ -1,5 +1,184 @@
+*{
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: linear-gradient(rgb(14, 14, 16),rgb(28, 34, 43));
+  background-repeat: no-repeat;
+  color: white;
+  height: 100vh;
+}
+nav {
+  background: rgb(28, 34, 43);
+  height: 7vh;
+}
+.nav-wrapper li {
+  height: 100%
+}
+.nav-wrapper a {
+  font-size: 1.4em;
+  margin: 0 auto;
+}
+.nav-wrapper > a {
+  margin: .5em .5em;
+}
+.imgCol {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.opImg{
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+.opsList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 2em;
+  align-items: flex-start;
+}
+  
+.opCard {
+  background-image: url(/images/r6-siege-v3-generic-bg.jpg);
+  background-repeat: no-repeat;
+  color: white;
+  margin: .5em;
+  padding: 0 1em;
+  height: 25vh;
+  width: 50vh;
+}
+
+.opCard p {
+  color: white;
+  line-height: 1em;
+}
+.opCardInfo{
+  background: rgba(10, 10, 10, 0.5);
+  padding: .5em;
+}
+
+/* Op Card */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 2em;
+}
+
+
+
+.clash-card {
+  background: white;
+  color: black;
+  width: 300px;
+  display: inline-block;
+  margin: auto;
+  border-radius: border-radius-size + 5;
+  position: relative;
+  text-align: center;
+  box-shadow: -1px 15px 30px -12px black;
+}
+
+.clash-card__image {
+  position: relative;
+  height: 230px;
+  margin-bottom: 35px;
+}
+
+.clash-card__image--barbarian {
+  background: url(/images/r6-siege-v3-generic-bg.jpg);
+  
+}
+
+.clash-card__image--barbarian > img {
+  width: 350px;
+  position: absolute;    
+  top: -70px;
+  left: -20px;
+}
+
+.clash-card__level {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.clash-card__unit-name {
+  font-size: 26px;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.clash-card__unit-description {
+  padding: 20px;
+  margin-bottom: 10px;  
+}
+
+
+
+
+.clash-card__unit-stats {
+  color: white;
+  font-weight: 700;
+  background: url(/images/r6-siege-v3-generic-bg.jpg);
+  
+}
+.one-third {
+  width: 33%;
+  float: left;
+  padding: 20px 15px;
+}
+.one-half {
+  width: 50%;
+  float: left;
+  padding: 20px 15px;
+}
+
+sup {
+  position: absolute;
+  bottom: 4px; 
+  font-size: 45%;
+  margin-left: 2px;
+}
+
+.stat {
+  position: relative;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.no-border {
+  border-right: none;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
 }
