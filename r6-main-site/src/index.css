@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
-
+html{
+  background: linear-gradient(rgb(14, 14, 16),rgb(28, 34, 43));
+}
 *{
   box-sizing: border-box;
 }
@@ -17,31 +19,21 @@ body ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
 }
-nav {
-  background: rgb(28, 34, 43);
-  height: 7vh;
+/* Header */
+.subMenu{
+ color: black !important;
 }
-header{
-  height: 7vh;
+.ui.button { 
+  border-radius: 0; 
 }
-.brand-logo {
-  margin: 0;
-}
-.nav-wrapper li {
-  height: 100%
-}
-.nav-wrapper a {
-  font-size: 1.4em;
-  margin: 0 auto;
-}
-.nav-wrapper > a {
-  margin-left: .5em;
-  font-size: 2em;
+.right .button{
+  margin-left: .5em !important;
 }
 .landingImg{
   width: 100%;
   max-height: 93vh;
 }
+
 /* op containers */
 .imgCol {
   height: 100%;
@@ -55,16 +47,20 @@ header{
   bottom: 0;
   position: absolute;
 }
+.opsContainer{
+  max-height: 91vh;
+  position: fixed;
+}
 .opsList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  margin-top: 6vh;
+  margin-top: 9vh;
   padding: 2em;
   align-items: flex-start;
   overflow: scroll;
-  max-height: 94vh;
+  max-height: 91vh;
 }
 .ops {
   margin: 0 auto;
@@ -125,7 +121,7 @@ header{
   font-size: 3.5em;
 }
 .atkops {
-  height: 93vh;
+  height: 91vh;
   position: static;
 }
 
@@ -254,3 +250,4 @@ ul {
 	clear: both !important;
 	height: 0 !important;
 }
+
