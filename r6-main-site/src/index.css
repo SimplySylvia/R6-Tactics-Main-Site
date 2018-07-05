@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
+
 *{
   box-sizing: border-box;
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Encode Sans Condensed', sans-serif;
   background: linear-gradient(rgb(14, 14, 16),rgb(28, 34, 43));
   background-repeat: no-repeat;
   color: white;
@@ -14,6 +16,12 @@ nav {
   background: rgb(28, 34, 43);
   height: 7vh;
 }
+header{
+  height: 7vh;
+}
+.brand-logo {
+  margin: 0;
+}
 .nav-wrapper li {
   height: 100%
 }
@@ -22,8 +30,14 @@ nav {
   margin: 0 auto;
 }
 .nav-wrapper > a {
-  margin: .5em .5em;
+  margin-left: .5em;
+  font-size: 2em;
 }
+.landingImg{
+  width: 100%;
+  max-height: 93vh;
+}
+/* op containers */
 .imgCol {
   height: 100%;
   width: 100%;
@@ -43,8 +57,17 @@ nav {
   margin: 0 auto;
   padding: 2em;
   align-items: flex-start;
+  overflow: scroll;
+  max-height: 90vh;
 }
-  
+.ops {
+  margin: 0 auto;
+  margin-top: 7vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .opCard {
   background-image: url(/images/r6-siege-v3-generic-bg.jpg);
   background-repeat: no-repeat;
@@ -69,15 +92,41 @@ nav {
 }
 
 .atkHeader {
-  background: #9B391D;
+  background: #AA511F;
+  height: 10vh;
+  text-align: center;
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 10;
 }
+
 .atkHeader h3{
   margin: 0;
+  font-size: 4em;
+}
+.defHeader {
+  background: #245EAF;
+  height: 10vh;
+  text-align: center;
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 10;
+}
+.defHeader h3{
+  margin: 0;
+  font-size: 4em;
+}
+.atkops {
+  height: 93vh;
+  position: static;
+}
+
+.hide {
+  display: none;
 }
 /* Op Card */
-
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
-
 
 
 *, *:before, *:after {
@@ -94,7 +143,9 @@ nav {
    font-size: 1.3em;
  }
 
-
+.gadget-name {
+  padding: 1em;
+}
 .clash-card {
   background: white;
   color: black;
@@ -150,6 +201,9 @@ nav {
   font-weight: 700;
   background: url(/images/r6-siege-v3-generic-bg.jpg);
   
+}
+.organization{
+  height: 100%;
 }
 .one-third {
   width: 33%;

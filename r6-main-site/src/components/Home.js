@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class Home extends Component {
   render() {
     return (
-      <h1>
-        This is the Home Page
-      </h1>
+      <div>
+        <img className="landingImg" src="./images/landing.jpg" />
+        </div>
     );
   }
 }

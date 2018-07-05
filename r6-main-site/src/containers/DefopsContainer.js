@@ -1,14 +1,12 @@
 import React, {Component} from 'react'
-import AtkopModel from '../models/Atkop'
-import Atkops from '../components/Atkops'
+import DefopModel from '../models/Defop'
+import Defops from '../components/Defops'
 
 class OpsContainer extends Component{
     constructor(){
         super()
         this.state = {
-          atkops: [],
-          editingAtkopId: null,
-          editing: false
+          defops: [],
         }
       }
 
@@ -17,11 +15,11 @@ class OpsContainer extends Component{
       }
     
       fetchData(){
-        AtkopModel.all().then( (res) => {
+        DefopModel.all().then( (res) => {
           console.log('Here is the res:',res)
           this.setState ({
-            atkops: res.data,
-            atkop: ''
+            defops: res.data,
+            defop: ''
           })
         })
       }
@@ -29,9 +27,10 @@ class OpsContainer extends Component{
     render(){
       return (
         <div className='opscontainer'>
-        {console.log('logged atk:',this.state.atkops)}
-        <Atkops atkops={this.state.atkops}/>
-        
+        {console.log('logged atk:',this.state.defops)}
+        <div className="DefopsList">
+        <Defops defops={this.state.defops}/>
+        </div>
 
         </div>
       )

@@ -1,25 +1,25 @@
 import React, {Component} from 'react'
-import Atkop from './Atkop'
+import Defop from './Defop'
 
-class Atkops extends Component {
+class Defops extends Component {
   render(){
-    let atkops = this.props.atkops.map( (atkop, i) => {
+    let defops = this.props.defops.map( (defop, i) => {
       return (
-        <Atkop
-          atkop={atkop}
+        <Defop
+          defop={defop}
           key={i} />
       )
     })
     
     return(
       <div className="atkops">
-      <div className="atkHeader">
-      <h3>Attack Operators</h3>
+      <div className="defHeader">
+      <h3>Defense Operators</h3>
       </div>
       
       <div className="opsList">
       <div className="ops">
-        {atkops}
+        {defops}
         </div>
         </div>
       </div>
@@ -27,4 +27,4 @@ class Atkops extends Component {
   }
 }
 
-export default Atkops
+export default Defops

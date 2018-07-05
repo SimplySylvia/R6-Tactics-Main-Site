@@ -11,7 +11,8 @@ class Header extends Component{
           <a className="brand-logo">R6 Tactics</a>
             <ul id="nav-mobile" className="right">
               <li className="waves-effect waves-light btn"><Link to={'/'}>Home</Link></li>
-              <li className="waves-effect waves-light btn"><Link to={'/ops'}>Ops</Link></li>
+              <li className="waves-effect waves-light btn"><Link to={'/AttackOps'}>Attack Operators</Link></li>
+              <li className="waves-effect waves-light btn"><Link to={'/DefenseOps'}>Defense Operators</Link></li>
             </ul>
           </div>
         </nav>
