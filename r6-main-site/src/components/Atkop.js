@@ -7,37 +7,20 @@ class Atkop extends Component {
 
   <div className="wrapper">
   {/* card for op details */}
-    <div className="clash-card barbarian">
-      <div className="clash-card__image clash-card__image--barbarian">
+    <div className="op-card">
+      <div className="op-card__image op-card__image">
         <img src={`http://localhost:8000${this.props.atkop.img}`} alt={`${this.props.atkop.name}`} />
       </div>
-      <div className="clash-card__level clash-card__level--barbarian"></div>
-      <div className="clash-card__unit-name">{this.props.atkop.name}</div>
+      <div className="op-card__level op-card__level"></div>
+      <div className="op-card__unit-name">{this.props.atkop.name}</div>
       {/* area to describe unique gadget */}
-      <div className="clash-card__unit-description">
-      <div className="clash-card__gadget-title">Unique Gadget</div>
+      <div className="op-card__unit-description">
+      <div className="op-card__gadget-title">Unique Gadget</div>
       <img className="one-half" src={`http://localhost:8000${this.props.atkop.badge}`} alt={`${this.props.atkop.name}`}/>
       <ul className="one-half gadget-name">
         <li>{this.props.atkop.gadget.name}</li>
         <li>Uses: {this.props.atkop.gadget.uses}</li>
       </ul>
-      </div>
-        {/* stats area for speed and armor rating */}
-      <div className="clash-card__unit-stats clash-card__unit-stats--barbarian clearfix">
-        <div className="one-third organization">
-          <div className="stat">{this.props.atkop.Organization}</div>
-          <div className="stat-value">Organization</div>
-        </div>
-
-        <div className="one-third">
-          <div className="stat">{this.props.atkop.ArmorRating}</div>
-          <div className="stat-value">Armor Rating</div>
-        </div>
-
-        <div className="one-third no-border">
-          <div className="stat">{this.props.atkop.SpeedRating}</div>
-          <div className="stat-value">Speed Rating</div>
-        </div>
       </div>
 
     </div> {/*   end of card */}

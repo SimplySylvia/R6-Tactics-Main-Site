@@ -12,6 +12,11 @@ body {
   color: white;
   height: 100vh;
 }
+body ::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 0px;
+  height: 0px;
+}
 nav {
   background: rgb(28, 34, 43);
   height: 7vh;
@@ -55,14 +60,15 @@ header{
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
+  margin-top: 6vh;
   padding: 2em;
   align-items: flex-start;
   overflow: scroll;
-  max-height: 90vh;
+  max-height: 94vh;
 }
 .ops {
   margin: 0 auto;
-  margin-top: 7vh;
+  margin-top: 9vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -103,7 +109,7 @@ header{
 
 .atkHeader h3{
   margin: 0;
-  font-size: 4em;
+  font-size: 3.5em;
 }
 .defHeader {
   background: #245EAF;
@@ -116,7 +122,7 @@ header{
 }
 .defHeader h3{
   margin: 0;
-  font-size: 4em;
+  font-size: 3.5em;
 }
 .atkops {
   height: 93vh;
@@ -137,19 +143,18 @@ header{
   padding-top: 40px;
   padding-bottom: 40px;
   margin: 2em;
+
 }
  li {
    text-align: left;
    font-size: 1.3em;
  }
 
-.gadget-name {
-  padding: 1em;
-}
-.clash-card {
-  background: white;
+
+.op-card {
+  background: whitesmoke;
   color: black;
-  width: 300px;
+  width: 200px;
   display: inline-block;
   margin: auto;
   border-radius: border-radius-size + 5;
@@ -157,38 +162,48 @@ header{
   text-align: center;
   box-shadow: -1px 15px 30px -12px black;
 }
-
-.clash-card__image {
-  position: relative;
-  height: 230px;
+.op-card:hover {
+  transform: scale(1.1);
 }
 
-.clash-card__image--barbarian {
+.op-card__image {
+  position: relative;
+  height: 100px;
+  width: 200px;
+}
+
+.op-card__image {
   background: url(/images/r6-siege-v3-generic-bg.jpg);
   
 }
 
-.clash-card__image--barbarian > img {
-  width: 350px;
+.op-card__image > img {
+  width: 200px;
   position: absolute;    
-  top: -70px;
-  left: -20px;
+  top: -71px;
+  left: -5px;
 }
 
-.clash-card__level {
+.op-card__level {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 3px;
   margin-top: 10px;
 }
-.clash-card__gadget-title {
+.op-card__gadget-title {
   font-size: 1.3em;
   color: black;
   margin-bottom: 5px;
   margin-top: 10px;
 }
-.clash-card__unit-name {
+ul {
+  list-style-type: none;
+}
+.gadget-name{
+  padding-left: 10px;
+}
+.op-card__unit-name {
   font-size: 2em;
   color: black;
   font-weight: 900;
@@ -196,7 +211,7 @@ header{
   margin-top: 10px;
 }
 
-.clash-card__unit-stats {
+.op-card__unit-stats {
   color: white;
   font-weight: 700;
   background: url(/images/r6-siege-v3-generic-bg.jpg);
@@ -206,7 +221,7 @@ header{
   height: 100%;
 }
 .one-third {
-  width: 33%;
+  width: 30%;
   float: left;
   padding: 20px 15px;
 }
@@ -232,10 +247,10 @@ header{
 }
 
 .clearfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
+	visibility: hidden !important;
+	display: block !important;
+	font-size: 0 !important;
+	content: " " !important;
+	clear: both !important;
+	height: 0 !important;
 }
