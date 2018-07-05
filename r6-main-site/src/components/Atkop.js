@@ -1,12 +1,15 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class Atkop extends Component {
+  
 
   render(){
     return(
 
   <div className="wrapper">
   {/* card for op details */}
+  <Link to={`/AttackOp/${this.props.atkop._id}`} as={`/AttackOp/${this.props.atkop.name}`}> 
     <div className="op-card">
       <div className="op-card__image op-card__image">
         <img src={`http://localhost:8000${this.props.atkop.img}`} alt={`${this.props.atkop.name}`} />
@@ -22,8 +25,8 @@ class Atkop extends Component {
         <li>Uses: {this.props.atkop.gadget.uses}</li>
       </ul>
       </div>
-
-    </div> {/*   end of card */}
+    </div> 
+    </Link>{/*   end of card */}
   </div>
   
     )

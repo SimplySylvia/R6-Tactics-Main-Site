@@ -9,5 +9,6 @@ export default (
     <Route exact path='/' component={ Home }/>
     <Route path='/AttackOps' component={ AtkopsContainer }/>
     <Route path='/DefenseOps' component={ DefopsContainer }/>
+    <Route path='/AttackOp/:id' component={ Home }/>
   </Switch>
 )
