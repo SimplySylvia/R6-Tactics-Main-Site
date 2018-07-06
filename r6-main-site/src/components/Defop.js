@@ -1,12 +1,17 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class Defop extends Component {
 
   render(){
+    const link = `/DefenseOp/${this.props.defop.name}`;
     return(
-
+      
   <div className="wrapper">
   {/* card for op details */}
+  <Link 
+  to={{pathname: link, state: {opid: `${this.props.defop._id}`}}} 
+  > 
     <div className="op-card">
       <div className="op-card__image op-card__image">
         <img src={`http://localhost:8000${this.props.defop.img}`} alt={`${this.props.defop.name}`} />
@@ -21,7 +26,8 @@ class Defop extends Component {
         <li>{this.props.defop.gadget.name}</li>
       </ul>
       </div>
-    </div> {/*   end of card */}
+    </div>
+    </Link> {/*   end of card */}
   </div>
   
     )

@@ -33,6 +33,9 @@ body ::-webkit-scrollbar {
   width: 100%;
   max-height: 93vh;
 }
+.ui{
+  height: 7vh;
+}
 /* op containers */
 .imgCol {
   height: 100%;
@@ -46,16 +49,16 @@ body ::-webkit-scrollbar {
   bottom: 0;
   position: absolute;
 }
-.opsContainer{
-  max-height: 95vh;
+.opscontainer{
+  max-height: 93vh;
   position: fixed;
+  margin-top: 7vh;
 }
 .opsList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0 auto;
-  margin-top: 5vh;
   padding: 2em;
   align-items: flex-start;
   overflow: scroll;
@@ -63,7 +66,7 @@ body ::-webkit-scrollbar {
 }
 .ops {
   margin: 0 auto;
-  margin-top: 5vh;
+  margin-top: 10vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -94,7 +97,7 @@ body ::-webkit-scrollbar {
 
 .atkHeader {
   background: #AA511F;
-  height: 5vh;
+  height: 10vh;
   text-align: center;
   position: fixed;
   margin: 0 auto;
@@ -108,7 +111,7 @@ body ::-webkit-scrollbar {
 }
 .defHeader {
   background: #245EAF;
-  height: 5vh;
+  height: 10vh;
   text-align: center;
   position: fixed;
   margin: 0 auto;
@@ -123,7 +126,9 @@ body ::-webkit-scrollbar {
   height: 91vh;
   position: static;
 }
-
+.atkopsList{
+  height: 100%;
+}
 .hide {
   display: none;
 }

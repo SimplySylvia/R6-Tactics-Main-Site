@@ -5,13 +5,15 @@ class Atkop extends Component {
   
 
   render(){
-    const link = `/AttackOp/${this.props.atkop._id}`;
-    
+    const link = `/AttackOp/${this.props.atkop.name}`;
+
     return(
 
   <div className="wrapper">
   {/* card for op details */}
-  <Link to={{pathname:link, query: { op: this.props.atkop }} } > 
+  <Link 
+  to={{pathname: link, state: {opid: `${this.props.atkop._id}`}}} 
+  > 
     <div className="op-card">
       <div className="op-card__image op-card__image">
         <img src={`http://localhost:8000${this.props.atkop.img}`} alt={`${this.props.atkop.name}`} />
@@ -24,7 +26,6 @@ class Atkop extends Component {
       <img className="one-half" src={`http://localhost:8000${this.props.atkop.badge}`} alt={`${this.props.atkop.name}`}/>
       <ul className="one-half gadget-name">
         <li>{this.props.atkop.gadget.name}</li>
-        <li>Uses: {this.props.atkop.gadget.uses}</li>
       </ul>
       </div>
     </div> 
