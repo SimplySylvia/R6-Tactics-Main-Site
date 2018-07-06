@@ -4,11 +4,11 @@ html{
 }
 *{
   box-sizing: border-box;
+  font-family: 'Encode Sans Condensed', sans-serif !important;
 }
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Encode Sans Condensed', sans-serif;
   background: linear-gradient(rgb(14, 14, 16),rgb(28, 34, 43));
   background-repeat: no-repeat;
   color: white;
@@ -257,5 +257,58 @@ ul {
 
 /* Op Deatil Page */
 .opDetail{
-  margin-top: 9vh;
+  margin-top: 7vh;
+  height: 93vh;
+}
+.segment {
+  display: flex;
+  color: black;
+  height: 10vh;
+}
+.progress{
+  height: 30px;
+  width: 100%;
+  margin-left: 1em;
+}
+.opHeader{
+  width: 60%;
+  height: 60vh;
+}
+.opHeaderName{
+  z-index: 10;
+  font-size: 3em;
+  background: rgba(10, 10, 10, 0.5);
+  color: white;
+  margin: 0 auto;
+  top: 0;
+  position: absolute;
+  margin-top: 7vh !important;
+  width: 20%;
+  text-align: center;
+}
+.stats{
+  width: 33%;
+  height: 20vh;
+}
+.opImgHeader{
+  width: 100%;
+  height: 100%;
+}
+.topdetail{
+  display: flex;
+  flex-direction: row;
+  background-color: #245EAF;
+  background: linear-gradient(#245EAF,rgb(14, 14, 16));
+}
+.backgroundOp{
+  width: 100%;
+  display: flex;
+  background-position: left;
+  background-position-y: 0;
+  background-size: inherit;
+  background-repeat: no-repeat;
+}
+.org{
+  margin-left: 1em;
+  margin-top: 0;
 }
