@@ -12,6 +12,7 @@ class DefOpDeatil extends Component {
     const ArmorRating = (this.props.defop.ArmorRating * 33) + 1
     Math.round(ArmorRating);
     const opimg = `http://localhost:8000${this.props.defop.img}`
+    const opbadge = `http://localhost:8000${this.props.defop.badge}`
     var divStyle = {
       backgroundImage: `url(${opimg})`
     };
@@ -22,6 +23,8 @@ class DefOpDeatil extends Component {
     <div className="backgroundOp" style={divStyle}>
       <section className="opHeader" >
       <p className="opHeaderName">{this.props.defop.name}</p>
+
+      <img className="opbadgeheader" src={opbadge} alt={`${this.props.defop.name} badge`}/>
       </section>
         <Segment.Group className="stats">
           <Segment>
@@ -43,9 +46,16 @@ class DefOpDeatil extends Component {
           <h2 className="org">{this.props.defop.Organization}</h2>
             
           </Segment>
-          <Segment>Content</Segment>
+          <Segment className="bio">
+          <h2>Bio:</h2>
+          <p className="biostory">{this.props.defop.bio}</p>
+          </Segment>
         </Segment.Group>
         </div>
+    </section>
+    <section className="mid-detail">
+    <h2>Equiptment</h2>
+
     </section>
   </div>
   

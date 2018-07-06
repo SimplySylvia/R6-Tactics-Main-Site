@@ -263,7 +263,7 @@ ul {
 .segment {
   display: flex;
   color: black;
-  height: 10vh;
+  height: 15%;
 }
 .progress{
   height: 30px;
@@ -287,8 +287,9 @@ ul {
   text-align: center;
 }
 .stats{
-  width: 33%;
-  height: 20vh;
+  width: 25%;
+  height: 60vh;
+  margin-left: 10% !important;
 }
 .opImgHeader{
   width: 100%;
@@ -299,6 +300,12 @@ ul {
   flex-direction: row;
   background-color: #245EAF;
   background: linear-gradient(#245EAF,rgb(14, 14, 16));
+  -webkit-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+  -moz-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+  box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+}
+.atkertop{
+  background: linear-gradient(#AA511F,rgb(14, 14, 16));
 }
 .backgroundOp{
   width: 100%;
@@ -307,8 +314,30 @@ ul {
   background-position-y: 0;
   background-size: inherit;
   background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+  -moz-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+  box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
 }
 .org{
   margin-left: 1em;
   margin-top: 0;
+}
+.bio{
+  height: 45%;
+}
+.biostory{
+  margin-left: 1em !important;
+  font-size: 1em;
+}
+
+.mid-detail{
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+  background: url(/images/r6-siege-v3-generic-bg.jpg);
+}
+.opbadgeheader{
+  height: 15vh;
+  position: absolute;
+  bottom: 220px;
 }
