@@ -5,11 +5,13 @@ class Atkop extends Component {
   
 
   render(){
+    const link = `/AttackOp/${this.props.atkop._id}`;
+    
     return(
 
   <div className="wrapper">
   {/* card for op details */}
-  <Link to={`/AttackOp/${this.props.atkop._id}`} as={`/AttackOp/${this.props.atkop.name}`}> 
+  <Link to={{pathname:link, query: { op: this.props.atkop }} } > 
     <div className="op-card">
       <div className="op-card__image op-card__image">
         <img src={`http://localhost:8000${this.props.atkop.img}`} alt={`${this.props.atkop.name}`} />
