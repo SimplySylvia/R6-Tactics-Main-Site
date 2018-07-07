@@ -16,6 +16,9 @@ class DefOpDeatil extends Component {
     var divStyle = {
       backgroundImage: `url(${opimg})`
     };
+    var gadgetimg = {
+      backgroundImage: `url(http://localhost:8000${this.props.defop.gadget.img})`
+    };
     return(
 
   <div className="opPage">
@@ -54,8 +57,50 @@ class DefOpDeatil extends Component {
         </div>
     </section>
     <section className="mid-detail">
-    <h2>Equiptment</h2>
-
+      <section className="weapons">
+        <section className="uniqueability">
+          <h1>Unique Ability</h1>
+          <div className="gadgetimg" style={gadgetimg}>
+          <h2>{this.props.defop.gadget.name}</h2>
+          </div>
+          <Segment className="gadgetdesc">
+            <p>{this.props.defop.gadget.desc}</p>
+          </Segment>
+          </section>
+    <Segment.Group className="priweapons">
+    <h1>Primary Weapons</h1>
+    <Segment>
+    <h1>{this.props.defop.primaries.pri1.name}</h1>
+    <img src={`http://localhost:8000${this.props.defop.primaries.pri1.img}`} />
+    </Segment>
+    <Segment>
+    <h1>{this.props.defop.primaries.pri2.name}</h1>
+    <img src={`http://localhost:8000${this.props.defop.primaries.pri2.img}`} />
+    </Segment>
+    </Segment.Group>
+    <Segment.Group className="secweapons">
+    <h1>Secondary Weapons</h1>
+    <Segment>
+    <h1>{this.props.defop.secondaries.sec1.name}</h1>
+    <img src={`http://localhost:8000${this.props.defop.secondaries.sec1.img}`} />
+    </Segment>
+    <Segment>
+    <h1>{this.props.defop.secondaries.sec2.name}</h1>
+    <img src={`http://localhost:8000${this.props.defop.secondaries.sec2.img}`} />
+    </Segment>
+    </Segment.Group>
+      <Segment.Group className="gadgets">
+      <h1>Gadgets</h1>
+        <Segment>
+          <h1>{this.props.defop.gadgets.gad1.name}</h1>
+          <img src={`http://localhost:8000${this.props.defop.gadgets.gad1.img}`} />
+        </Segment>
+        <Segment>
+          <h1>{this.props.defop.gadgets.gad2.name}</h1>
+          <img src={`http://localhost:8000${this.props.defop.gadgets.gad2.img}`} />
+        </Segment>
+      </Segment.Group>
+    </section>
     </section>
   </div>
   

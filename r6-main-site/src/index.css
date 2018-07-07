@@ -329,15 +329,75 @@ ul {
   margin-left: 1em !important;
   font-size: 1em;
 }
-
-.mid-detail{
-  display: flex;
-  flex-direction: row;
-  height: 60vh;
-  background: url(/images/r6-siege-v3-generic-bg.jpg);
-}
 .opbadgeheader{
   height: 15vh;
   position: absolute;
   bottom: 220px;
+}
+/* mid detail op section */
+.mid-detail{
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  background: url(/images/r6-siege-v3-generic-bg.jpg);
+  padding-top: 2em;
+}
+.priweapons, .secweapons, .gadgets{
+  margin: 0 !important;
+  width: 25% !important;
+}
+.priweapons .segment, .secweapons .segment, .gadgets .segment{
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1em !important;
+  
+}
+.priweapons .segment h1, .secweapons .segment h1, .gadgets .segment h1{
+font-size: 1em;
+}
+.priweapons .segment img , .secweapons .segment img , .secweapons .segment img{
+  width: 70%;
+  margin: 0 auto;
+}
+.weapons{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  text-align: center;
+}
+.uniqueability{
+  display: flex;
+  flex-direction: column;
+  margin-right: 2%;
+  margin-left: 2%;
+  width: 40%;
+  text-align: center;
+  height: 100%;
+}
+.uniqueability h2{
+  margin: 0;
+  font-size: 2em;
+}
+.gadgetimg{
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  height: 18vh;
+  padding: 5vh;
+  font-size: 2em;
+}
+.gadgetdesc{
+  height: 20vh;
+}
+.gadgetdesc p {
+  padding: .5em;
+}
+.gadgets{
+  margin-right: 2% !important;
+}
+.gadgets img{
+  width: 100%;
 }
