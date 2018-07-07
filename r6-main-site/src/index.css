@@ -4,6 +4,7 @@ html{
 }
 *{
   box-sizing: border-box;
+
   font-family: 'Encode Sans Condensed', sans-serif !important;
 }
 body {
@@ -13,6 +14,8 @@ body {
   background-repeat: no-repeat;
   color: white;
   height: 100vh;
+
+  font-family: 'Encode Sans Condensed', sans-serif !important;
 }
 body ::-webkit-scrollbar {
   -webkit-appearance: none;
@@ -22,6 +25,9 @@ body ::-webkit-scrollbar {
 /* Header */
 .subMenu{
  color: black !important;
+}
+i .icons {
+  font-family: Icons !important;
 }
 .ui.button { 
   border-radius: 0; 
@@ -35,6 +41,9 @@ body ::-webkit-scrollbar {
 }
 .ui{
   height: 7vh;
+}
+.ui .logo {
+  filter: invert(100%);
 }
 /* op containers */
 .imgCol {
@@ -53,6 +62,7 @@ body ::-webkit-scrollbar {
   max-height: 93vh;
   position: fixed;
   margin-top: 7vh;
+  font-family: 'Encode Sans Condensed', sans-serif !important;
 }
 .opsList {
   display: flex;
@@ -154,7 +164,7 @@ body ::-webkit-scrollbar {
 .op-card {
   background: whitesmoke;
   color: black;
-  width: 200px;
+  width: 150px;
   display: inline-block;
   margin: auto;
   border-radius: border-radius-size + 5;
@@ -169,7 +179,7 @@ body ::-webkit-scrollbar {
 .op-card__image {
   position: relative;
   height: 100px;
-  width: 200px;
+  width: 150px;
 }
 
 .op-card__image {
@@ -178,10 +188,10 @@ body ::-webkit-scrollbar {
 }
 
 .op-card__image > img {
-  width: 200px;
+  width: 190px;
   position: absolute;    
-  top: -71px;
-  left: -5px;
+  top: -64px;
+  left: -22px;
 }
 
 .op-card__level {
@@ -202,6 +212,8 @@ ul {
 }
 .gadget-name{
   padding-left: 10px;
+  text-emphasis: wrap;
+  margin-top: 1em;
 }
 .op-card__unit-name {
   font-size: 2em;
@@ -227,7 +239,9 @@ ul {
 }
 .one-half {
   width: 50%;
-  float: left;
+}
+.one-half img {
+  margin: 0 auto;
 }
 
 .stat {
@@ -259,6 +273,11 @@ ul {
 .opDetail{
   margin-top: 7vh;
   height: 93vh;
+  font-family: 'Encode Sans Condensed', sans-serif !important;
+}
+.oppage{
+
+  font-family: 'Encode Sans Condensed', sans-serif !important;
 }
 .segment {
   display: flex;
@@ -387,7 +406,7 @@ font-size: 1em;
   background-position-y: center;
   height: 18vh;
   padding: 5vh;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .gadgetdesc{
   height: 20vh;

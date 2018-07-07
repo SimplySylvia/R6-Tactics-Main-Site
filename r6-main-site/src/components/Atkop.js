@@ -22,11 +22,7 @@ class Atkop extends Component {
       <div className="op-card__unit-name">{this.props.atkop.name}</div>
       {/* area to describe unique gadget */}
       <div className="op-card__unit-description">
-      <div className="op-card__gadget-title">Unique Gadget</div>
       <img className="one-half" src={`http://localhost:8000${this.props.atkop.badge}`} alt={`${this.props.atkop.name}`}/>
-      <ul className="one-half gadget-name">
-        <li>{this.props.atkop.gadget.name}</li>
-      </ul>
       </div>
     </div> 
     </Link>{/*   end of card */}

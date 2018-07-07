@@ -20,11 +20,7 @@ class Defop extends Component {
       <div className="op-card__unit-name">{this.props.defop.name}</div>
       {/* area to describe unique gadget */}
       <div className="op-card__unit-description">
-      <div className="op-card__gadget-title">Unique Gadget</div>
       <img className="one-half" src={`http://localhost:8000${this.props.defop.badge}`} alt={`${this.props.defop.name}`}/>
-      <ul className="one-half gadget-name">
-        <li>{this.props.defop.gadget.name}</li>
-      </ul>
       </div>
     </div>
     </Link> {/*   end of card */}
