@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container,Dropdown,Image,Menu,Button, MenuItem} from 'semantic-ui-react'
+import {Container,Dropdown,Image,Menu,Button} from 'semantic-ui-react'
 import {Link} from 'react-router-dom';
 
 const FixedMenuLayout = () => (
@@ -29,7 +29,7 @@ const FixedMenuLayout = () => (
           </Dropdown.Menu>
         </Dropdown>
         {/* map menu item */}
-        <Menu.Item as='a'><Link to={'/'}>Maps</Link></Menu.Item>
+        <Menu.Item as='a'><Link to={'/Maps'}>Maps</Link></Menu.Item>
         {/* sign in section */}
         <Menu.Item position='right'>
         <Button as='a' primary> Sign In </Button>

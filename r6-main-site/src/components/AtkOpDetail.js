@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Segment, Container } from 'semantic-ui-react'
+import { Segment } from 'semantic-ui-react'
 import { ProgressBar } from 'react-bootstrap'
 
 class AtkOpDeatil extends Component {

@@ -5,6 +5,8 @@ import AtkopsContainer from '../containers/AtkopsContainer';
 import DefopsContainer from '../containers/DefopsContainer';
 import AtkOpDetailContainer from '../containers/AtkOpDetailContainer';
 import DefOpDetailContainer from '../containers/DefOpDetailContainer';
+import MapContainer from '../containers/MapContainer';
+import MapDetailContainer from '../containers/MapDetailContainer';
 
 export default (
   <Switch>
@@ -13,5 +15,7 @@ export default (
       <Route path='/DefenseOps' component={ DefopsContainer }/>
       <Route path='/AttackOp/:name' component={ AtkOpDetailContainer }/>
       <Route path='/DefenseOp/:name' component={ DefOpDetailContainer }/>
+      <Route path='/Maps' component={MapContainer}/>
+      <Route path='/Map/:name' component={MapDetailContainer}/>
   </Switch>
 )

@@ -39,7 +39,7 @@ i .icons {
   width: 100%;
   max-height: 93vh;
 }
-.ui{
+.menu{
   height: 7vh;
 }
 .ui .logo {
@@ -167,7 +167,7 @@ i .icons {
   width: 150px;
   display: inline-block;
   margin: auto;
-  border-radius: border-radius-size + 5;
+  border-radius: 5px;
   position: relative;
   text-align: center;
   box-shadow: -1px 15px 30px -12px black;
@@ -341,17 +341,23 @@ ul {
   margin-left: 1em;
   margin-top: 0;
 }
-.bio{
-  height: 45%;
-}
-.biostory{
-  margin-left: 1em !important;
-  font-size: 1em;
+.content{
+  font-size: 2em;
+  color: black;
 }
 .opbadgeheader{
   height: 15vh;
   position: absolute;
   bottom: 220px;
+}
+.biomodal{
+  height: 30vh;
+}
+.biobutt{
+  margin: 0 auto !important;
+  width: 60%;
+  color: white !important;
+  background: #245EAF !important;
 }
 /* mid detail op section */
 .mid-detail{
@@ -363,7 +369,7 @@ ul {
 }
 .priweapons, .secweapons, .gadgets{
   margin: 0 !important;
-  width: 25% !important;
+  width: 20% !important;
 }
 .priweapons .segment, .secweapons .segment, .gadgets .segment{
   height: 20vh;
@@ -376,8 +382,12 @@ ul {
 .priweapons .segment h1, .secweapons .segment h1, .gadgets .segment h1{
 font-size: 1em;
 }
-.priweapons .segment img , .secweapons .segment img , .secweapons .segment img{
+.priweapons .segment img , .secweapons .segment img , .gadgets .segment img{
   width: 70%;
+  margin: 0 auto;
+}
+.gadgets .segment img{
+  width: 50%;
   margin: 0 auto;
 }
 .weapons{
@@ -419,4 +429,125 @@ font-size: 1em;
 }
 .gadgets img{
   width: 100%;
+}
+/* map container */
+.mapHeader{
+  width: 100%;
+  height: 7vh;
+  text-align: center;
+  background: #245EAF;
+  display: flex;
+}
+.mapHeader h3{
+  margin: auto auto;
+  color: whitesmoke;
+  font-size: 2em;
+  text-align: center;
+}
+.mapcontainer{
+  margin-top: 7vh;
+  max-height: 93vh;
+}
+.maps{
+  margin-top: 1.5em;
+}
+/* map card */
+.mapcard{
+  width: 30vh;
+  height: 20vh;
+  text-align: center;
+  border: none;
+  margin: 1em auto;
+  border-radius: 1vh;
+  
+}
+.text-shadow {
+  text-shadow: .1em .1em rgba(0, 0, 0, 0.507);
+  font-size: 2em;
+  }
+
+.flip {
+  position: relative;
+  display: flex;
+}
+.front {
+  background-size: cover;
+  display: flex;
+  border-radius: 1vh;
+  width: 100%;
+  height: 20vh;
+}
+.front h1 {
+  margin: auto auto;
+  color: whitesmoke;
+  font-size: 3em;
+  text-align: center;
+}
+.mapcard:hover {
+  transform: scale(1.1);
+}
+/* detail map page */
+.mapDetailContainer{
+  margin-top: 7vh;
+  max-height: 93vh;
+}
+.mapDetailHeader{
+  width: 100%;
+  height: 7vh;
+  text-align: center;
+  display: flex;
+  background-color: #AA511F;
+}
+.mapDetailPage section{
+  display: flex;
+}
+.mapDetailHeader h3{
+  margin: auto auto;
+  color: whitesmoke;
+  font-size: 2em;
+  text-align: center;
+}
+/* buttons for atk plan and defense plan */
+.createBut{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row-reverse;
+  margin: .5em .2em;
+}
+.creAtkBut{
+  background: #AA511F !important;
+  color: white !important;
+}
+.creDefBut{
+  background: #245EAF !important;
+  color: white !important;
+}
+/* div for maps */
+.mapSection{
+  background: #36a9e0;
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100%;
+}
+.mapViewer{
+  width: 75%;
+  height: 80vh;
+  background: #245EAF;
+}
+.mapOptions{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+.mapOptions h1{
+  font-size: 1.2em;
+}
+.floorOptions{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.floorOptions .floor {
+  margin: .2em;
 }

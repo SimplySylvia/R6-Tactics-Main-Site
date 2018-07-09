@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Segment, Container } from 'semantic-ui-react'
+import { Segment, Button, Modal } from 'semantic-ui-react'
 import { ProgressBar } from 'react-bootstrap'
 
 class DefOpDeatil extends Component {
@@ -50,9 +50,18 @@ class DefOpDeatil extends Component {
             
           </Segment>
           <Segment className="bio">
-          <h2>Bio:</h2>
-          <p className="biostory">{this.props.defop.bio}</p>
+          
+          <Modal className="biomodal" trigger={<Button className="biobutt">Show Bio</Button>} centered={false}>
+            <Modal.Header>Bio</Modal.Header>
+            <Modal.Content>
+              <Modal.Description>
+                <p>{this.props.defop.bio}</p>
+              </Modal.Description>
+            </Modal.Content>
+          </Modal>
+
           </Segment>
+
         </Segment.Group>
         </div>
     </section>
