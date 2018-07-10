@@ -4,12 +4,12 @@ class MapViewer extends Component {
 
 
   render(){
+    const floorimg = `http://localhost:8000${this.props.selectedFloor.img}`
     console.log("VIEWER: ", this.props.selectedFloor)
     return(
       <section className='mapViewer'>
-        <div>
-          <h1>I AM MAP {this.props.map.name}</h1>
-          <h1>We are seeing {this.props.selectedFloor.name}</h1>
+        <div className='map'>
+          <img src={floorimg}/>
           </div>
       </section>
     )
