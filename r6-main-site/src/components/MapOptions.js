@@ -1,30 +1,10 @@
 import React, {Component} from 'react';
 import { Button, Dropdown } from 'semantic-ui-react';
+import FloorButtons from './FloorButtons';
 
 class MapOptions extends Component {
-  constructor(){
-    super();
-    this.selectFloor = this.selectFloor.bind(this);
- }
- 
- selectFloor(){
-    this.props.onSelectFloor(this.props.floor)
-    console.log("YOOOO", this.props.floor)
- }
-
-
-
+  
   render(){
-    // loop through all floors and create a button for each floor 
-    let floorButtons = this.props.map.floors.map((floorButton)=>{
-      // console.log(`this is the floor button:`,floorButton);
-      if (floorButton.name !== 'NA'){
-        return (
-          <Button className='floor' floor={floorButton} onClick={this.selectFloor}>{floorButton.name}</Button>
-        )
-      }
-      
-    });
 
     console.log(`here is a prop:`, this.props.map);
 
@@ -81,9 +61,7 @@ class MapOptions extends Component {
     return(
       <section className='mapOptions'>
         <h1>Floors</h1>
-        <div className='floorOptions'>
-          {floorButtons}
-        </div>
+        <FloorButtons floors={this.props.map.floors} selectedFloor={this.props.selectedFloor} onSelectFloor={this.props.onSelectFloor}/>
         <h1>Bomb Locations</h1>
         <div className='bombLocations'>
         <Dropdown className='bombDropDown' placeholder='Select Location' fluid selection options={bombOptions} />

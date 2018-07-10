@@ -4,24 +4,31 @@ import MapOptions from './MapOptions';
 import MapViewer from './MapViewer';
 
 class MapDetail extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state = {
-      selectedFloor: [],
+      selectedFloor: '',
     }
     this.onSelectFloor = this.onSelectFloor.bind(this);
   }
+
   onSelectFloor(floor){
     console.log("I CLICKED A FLOOR");
     this.setState({
-       selectedFloor: [floor]
+       selectedFloor: floor
     })
     console.log("HELLO Floor: ", this.state.selectedFloor)
-}
-
+  }
+  componentWillMount(){
+    this.setState((prevState, props) => {
+      return { selectedFloor:  props.map.floors[0]}
+   });
+  }
+  
 
   render(){
-
+    console.log("STATE!")
+    console.log("WE'RE PASSING IN :", this.state.selectedFloor.name)
     return(
 
   <div className="mapDetailPage">
