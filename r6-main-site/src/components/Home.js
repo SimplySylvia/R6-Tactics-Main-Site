@@ -4,7 +4,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <img className="landingImg" src="./images/landing.jpg" />
+        <img className="landingImg" src="http://localhost:8000/images/landingback.png" />
         </div>
     );
   }

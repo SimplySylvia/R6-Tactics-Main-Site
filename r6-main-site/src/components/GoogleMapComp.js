@@ -20,6 +20,19 @@ class GoogleMapComp extends Component {
         {
           this.createMap();
         }
+        if (this.props.canDraw !== prevProps.canDraw){
+          this.createMap();
+        }
+        if (this.props.selectedBomb !== prevProps.selectedBomb){
+          this.createMap();
+        }
+        if (this.props.selectedSecure !== prevProps.selectedSecure){
+          this.createMap();
+        }
+        if (this.props.selectedHostage !== prevProps.selectedHostage){
+          this.createMap();
+        }
+        
       } 
 
       createMap(){
@@ -88,14 +101,227 @@ class GoogleMapComp extends Component {
               center: map.getCenter(),
             });
           });
+          let colorChoice = this.props.selectedColor
+          if (this.props.canDraw == true){
+            (function(m,o){
+              var goo   = window.google.maps,
+                  _this ={cache   : {},
+                          map     : m,
+                          options : o||{strokeColor: colorChoice },
+                          poly    : false,
+                          draw    : function(e){
+                                      if(!e || !this.poly){
+                                        this.poly=false;
+                                        return;
+                                      }
+                                      var l = this.cache[this.poly],
+                                          p = l.getPath();
+                                          p.insertAt(p.getLength(),e.latLng);
+                                          l.setPath(p);
+                                    },
+                          init    : function(e){
+                                      var options           = this.options;
+                                          options.map       = this.map;
+                                          options.clickable = false;
+                                      
+                                      this.poly ='p'  + new Date().getTime();
+                                  
+                                      this.cache[this.poly]=
+                                        new goo.Polyline(options);
+                                        this.draw(e);
+                                    }
+                              
+                       };
+              goo.event.addListener(m,'mousemove',function(e){_this.draw(e);})        
+              goo.event.addListener(m,'mouseup',  function(e){_this.draw(0);})        
+              goo.event.addListener(m,'mouseout', function(e){_this.draw(0);})        
+              goo.event.addListener(m,'mousedown',function(e){_this.init(e);}) 
+              m.setOptions({draggable:false});
+              return _this;
+            })(map)
+          }
+
+          var bombIcon = new window.google.maps.MarkerImage("http://localhost:8000/images/bomb.png", null, null, null, new window.google.maps.Size(43,70));
+          var secureIcon = new window.google.maps.MarkerImage("http://localhost:8000/images/securearea.png", null, null, null, new window.google.maps.Size(55,70));
+          var hostageIcon = new window.google.maps.MarkerImage("http://localhost:8000/images/hostage.png", null, null, null, new window.google.maps.Size(55,70));
+            // conditional statement for bomb site 3
+
+          if( this.props.selectedFloor === this.props.map.floors[0] && this.props.selectedBomb === this.props.map.bombsites[2]){
+
+          let marker1 = new window.google.maps.Marker({
+            position: {lat: 63, lng: -20},
+            map: map,
+            title: '3A',
+            icon: bombIcon,
+                    });
+
+          let marker2 = new window.google.maps.Marker({
+              position: {lat: 55, lng: 10},
+              map: map,
+              title: '3B',
+              icon: bombIcon,
+                              });
+          } 
+            // conditional statement for bomb site 2
+            
+          if( this.props.selectedFloor === this.props.map.floors[0] && this.props.selectedBomb === this.props.map.bombsites[1]){
+ 
+          let marker1 = new window.google.maps.Marker({
+            position: {lat: 63, lng: -20},
+            map: map,
+            title: '3A',
+            icon: bombIcon,
+                    });
+          }
+
+            // conditional statement for bomb site 2-2
+            
+            if( this.props.selectedFloor === this.props.map.floors[1] && this.props.selectedBomb === this.props.map.bombsites[1]){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: 63, lng: -20},
+                map: map,
+                title: '3A',
+                icon: bombIcon,
+                        });
+              }
+
+            // conditional statement for bomb site 1
+            
+            if( this.props.selectedFloor === this.props.map.floors[2] && this.props.selectedBomb === this.props.map.bombsites[0]){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: 67, lng: -23},
+                map: map,
+                title: '3A',
+                icon: bombIcon,
+                        });
+
+              let marker2 = new window.google.maps.Marker({
+                  position: {lat: 53, lng: -20},
+                  map: map,
+                  title: '3B',
+                  icon: bombIcon,
+                        });
+
+              }
+
+               // conditional statement for secure 1
+            
+            if( this.props.selectedFloor === this.props.map.floors[0] && this.props.selectedSecure === this.props.map.securearea.area1){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: 55, lng: 6},
+                map: map,
+                title: '3A',
+                icon: secureIcon,
+                        });
+
+              }
+                // conditional statement for secure 2
+            
+            if( this.props.selectedFloor === this.props.map.floors[1] && this.props.selectedSecure === this.props.map.securearea.area2){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: 63, lng: -18},
+                map: map,
+                title: '3A',
+                icon: secureIcon,
+                        });
+
+              }    
+
+                  // conditional statement for secure 3
+            
+            if( this.props.selectedFloor === this.props.map.floors[2] && this.props.selectedSecure === this.props.map.securearea.area3){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: 50, lng: -18},
+                map: map,
+                title: '3A',
+                icon: secureIcon,
+                        });
+
+              } 
+                  // conditional statement for secure 4
+            
+            if( this.props.selectedFloor === this.props.map.floors[2] && this.props.selectedSecure === this.props.map.securearea.area4){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: 55, lng: 8},
+                map: map,
+                title: '3A',
+                icon: secureIcon,
+                        });
+
+              } 
+
+                  // conditional statement for hostage 1
+            
+            if( this.props.selectedFloor === this.props.map.floors[0] && this.props.selectedHostage === this.props.map.hostage.area1){
+
+                    let marker1 = new window.google.maps.Marker({
+                      position: {lat: 55, lng: -8},
+                      map: map,
+                      title: '3A',
+                      icon: hostageIcon,
+                              });
+      
+                    } 
+
+            // conditional statement for hostage 2
+            
+            if( this.props.selectedFloor === this.props.map.floors[1] && this.props.selectedHostage === this.props.map.hostage.area2){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: 55, lng: 14},
+                map: map,
+                title: '3A',
+                icon: hostageIcon,
+                        });
+
+              } 
+
+            // conditional statement for hostage 3
+            
+            if( this.props.selectedFloor === this.props.map.floors[2] && this.props.selectedHostage === this.props.map.hostage.area3){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: 64, lng: -22},
+                map: map,
+                title: '3A',
+                icon: hostageIcon,
+                        });
+
+              } 
+
+              // conditional statement for hostage 4
+            
+            if( this.props.selectedFloor === this.props.map.floors[2] && this.props.selectedHostage === this.props.map.hostage.area4){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: 55, lng: 14},
+                map: map,
+                title: '3A',
+                icon: hostageIcon,
+                        });
+
+              } 
+
       }
+
+      
 
   render(){
     //render out the div with the idea so the div is being created when the function is ran solving nonrender issue
     //<div id='map' />
+    console.log( 'here is the securearea',this.props.map.securearea.area1)
+    console.log( 'here is the securearea prop',this.props.selectedSecure)
     return(
         <div id='app'>
-        <div id='map' />
+        <div id='map'>
+        <canvas className="canvas"/>
+        </div>
       </div>
     )
   }

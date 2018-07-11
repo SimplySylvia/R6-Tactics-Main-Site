@@ -26,7 +26,7 @@ body ::-webkit-scrollbar {
 .subMenu{
  color: black !important;
 }
-i .icons {
+i.icon {
   font-family: Icons !important;
 }
 .ui.button { 
@@ -41,6 +41,7 @@ i .icons {
 }
 .menu{
   height: 7vh;
+  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
 }
 .ui .logo {
   filter: invert(100%);
@@ -514,6 +515,15 @@ font-size: 1em;
   flex-direction: row;
   flex-flow: row-reverse;
   margin: .5em .2em;
+  width: 50%;
+}
+.drawingSec{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  margin: .5em .2em;
+  width: 50%;
+  color: black;
 }
 .creAtkBut{
   background: #AA511F !important;
@@ -553,6 +563,7 @@ font-size: 1em;
 }
 .mapOptions h1{
   font-size: 1.2em;
+  margin: .3em;
 }
 .floorOptions{
   display: flex;
@@ -563,9 +574,12 @@ font-size: 1em;
   margin: .2em;
 }
 
+.secureLocations .ui.buttons, .hosLocations .ui.buttons, .atkLocations .ui.buttons{
+  flex-wrap: wrap !important;
+  border-radius: none !important;
+}
 /* Map CSS */
 
 #root, #app, #map {
   height: 100%;
 }
-
