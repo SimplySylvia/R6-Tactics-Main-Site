@@ -17,7 +17,8 @@ class GoogleMapComp extends Component {
       componentWillReceiveProps(nextProps) {
         if(JSON.stringify(this.props.selectedFloor) !== JSON.stringify(nextProps.selectedFloor))
         {
-               this.createMap();
+          this.createMap();
+          this.forceUpdate();
         }
       } 
 
@@ -88,6 +89,7 @@ class GoogleMapComp extends Component {
             });
           });
       }
+
   render(){
     //render out the div with the idea so the div is being created when the function is ran solving nonrender issue
     //<div id='map' />
