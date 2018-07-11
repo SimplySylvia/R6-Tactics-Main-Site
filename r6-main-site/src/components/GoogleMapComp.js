@@ -14,12 +14,11 @@ class GoogleMapComp extends Component {
         console.log('component mounted', this.props.selectedFloor)
 
       }
-
-      componentWillReceiveProps(nextProps) {
-        if(this.props.selectedFloor !== nextProps.selectedFloor)
+      
+      componentDidUpdate(prevProps) {
+        if(this.props.selectedFloor !== prevProps.selectedFloor)
         {
           this.createMap();
-          console.log('map has been created through prop change',this.props.selectedFloor)
         }
       } 
 
@@ -97,7 +96,6 @@ class GoogleMapComp extends Component {
     //<div id='map' />
     return(
         <div id='app'>
-        <h2>{this.props.selectedFloor.name}</h2>
         <div id='map' />
       </div>
     )

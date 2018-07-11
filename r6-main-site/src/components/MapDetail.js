@@ -10,19 +10,12 @@ class MapDetail extends Component {
       selectedFloor: '',
     }
     this.onSelectFloor = this.onSelectFloor.bind(this);
-    this.forceUpdateHandler = this.forceUpdateHandler.bind(this);
   }
 
-  forceUpdateHandler(){
-    this.forceUpdate();
-  };
-
   onSelectFloor(floor){
-    console.log("I CLICKED A FLOOR");
     this.setState({
        selectedFloor: floor
     })
-    console.log("HELLO Floor: ", this.state.selectedFloor)
   }
   componentWillMount(){
     this.setState((prevState, props) => {
@@ -31,8 +24,6 @@ class MapDetail extends Component {
   }
 
   render(){
-    console.log("STATE!")
-    console.log("WE'RE PASSING IN :", this.state.selectedFloor.name)
     return(
 
   <div className="mapDetailPage">
@@ -45,8 +36,14 @@ class MapDetail extends Component {
   </section>
       
   <section className='mapSection'>
-      <MapViewer map={this.props.map} selectedFloor={this.state.selectedFloor} onClick={this.forceUpdateHandler}/>
-      <MapOptions map={this.props.map} selectedFloor={this.state.selectedFloor} onSelectFloor={this.onSelectFloor} forceUpdate={this.forceUpdateHandler}/>
+      <MapViewer
+       map={this.props.map}
+      selectedFloor={this.state.selectedFloor}
+      onClick={this.forceUpdateHandler}/>
+      <MapOptions 
+      map={this.props.map} 
+      selectedFloor={this.state.selectedFloor} 
+      onSelectFloor={this.onSelectFloor} />
   </section>
   </div>
   
