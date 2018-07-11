@@ -4,28 +4,29 @@ class GoogleMapComp extends Component {
     constructor() {
         super();
         this.state = {
-          zoom: 1,
-          maptype: [],
+          zoom: 2,
+          center: {lat: 60, lng: 0},
         }
       }
 
     componentDidMount() {
-      this.createMap();
-        
+        this.createMap();
+        console.log('component mounted', this.props.selectedFloor)
+
       }
 
       componentWillReceiveProps(nextProps) {
-        if(JSON.stringify(this.props.selectedFloor) !== JSON.stringify(nextProps.selectedFloor))
+        if(this.props.selectedFloor !== nextProps.selectedFloor)
         {
           this.createMap();
-          this.forceUpdate();
+          console.log('map has been created through prop change',this.props.selectedFloor)
         }
       } 
 
       createMap(){
         let map = new window.google.maps.Map(document.getElementById('map'), {
-          center: {lat: 60, lng: 0},
-          zoom: 2,
+          center: this.state.center,
+          zoom: this.state.zoom,
           streetViewControl: false,
           mapTypeControlOptions: {
             mapTypeIds: [this.props.selectedFloor.name]
@@ -83,10 +84,11 @@ class GoogleMapComp extends Component {
             });
           });
           
-          map.addListener('maptypeid_changed', () => {
+          map.addListener('center_changed', () => {
             this.setState({
-              maptype: map.getMapTypeId(),
+              center: map.getCenter(),
             });
+            console.log(map.getCenter())
           });
       }
 
