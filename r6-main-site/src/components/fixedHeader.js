@@ -10,7 +10,7 @@ const FixedMenuLayout = () => (
         {/* menu item logo */}
         <Menu.Item  header>
           <Image className="logo" size='mini' src='./images/logo.png' style={{ marginRight: '1.5em' }} />
-          R6 Tactics
+          R6 META
         </Menu.Item>
         {/* menu item home */}
         <Menu.Item as='a'><Link to={'/'}>Home</Link></Menu.Item>

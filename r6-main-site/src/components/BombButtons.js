@@ -5,12 +5,11 @@ import BombButton from './BombButton';
 class BombButtons extends Component {
   
   render(){
-    console.log(this.props.bombs)
     // loop through all bombs and create a button for each 
-    let bombButtons = this.props.bombs.map((bombButton)=>{
+    let bombButtons = this.props.bombs.map((bombButton, i)=>{
       if (bombButton.name !== 'NA'){
         return (
-          <BombButton onSelectBomb={this.props.onSelectBomb} className='bomb' bomb={bombButton} />
+          <BombButton key={i} onSelectBomb={this.props.onSelectBomb} className='bomb' bomb={bombButton} />
         )
       }
       

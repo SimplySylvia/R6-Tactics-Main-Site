@@ -5,12 +5,11 @@ import FloorButton from './FloorButton';
 class FloorButtons extends Component {
   
   render(){
-    console.log(this.props.floor)
     // loop through all floors and create a button for each floor 
-    let floorButtons = this.props.floors.map((floorButton)=>{
+    let floorButtons = this.props.floors.map((floorButton, i)=>{
       if (floorButton.name !== 'NA'){
         return (
-          <FloorButton onSelectFloor={this.props.onSelectFloor} className='floor' floor={floorButton} />
+          <FloorButton key={i} onSelectFloor={this.props.onSelectFloor} className='floor' floor={floorButton} />
         )
       }
       

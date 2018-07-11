@@ -87,7 +87,6 @@ class GoogleMapComp extends Component {
             this.setState({
               center: map.getCenter(),
             });
-            console.log(map.getCenter())
           });
       }
 

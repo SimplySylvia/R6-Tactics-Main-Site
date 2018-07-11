@@ -2,15 +2,15 @@ import React, {Component} from 'react';
 import { Button, Dropdown } from 'semantic-ui-react';
 import SecureButton from './SecureButton';
 
-class BombButtons extends Component {
+class SecureButtons extends Component {
   
   render(){
-    console.log(this.props.secureareas)
     // loop through all bombs and create a button for each 
-    let secureButtons = this.props.secureareas.map((secureButton)=>{
+    let saLocations = Object.values(this.props.secureareas);
+    let secureButtons = saLocations.map((secureButton, i)=>{
       if (secureButton.name !== 'NA'){
         return (
-          <SecureButton onSelectsecure={this.props.onSelectSecure} className='secure' secure={secureButton} />
+          <SecureButton key={i} onSelectSecure={this.props.onSelectSecure} className='secure' secure={secureButton} />
         )
       }
       
@@ -28,4 +28,4 @@ class BombButtons extends Component {
 }
 
 
-export default BombButtons
+export default SecureButtons
