@@ -562,3 +562,10 @@ font-size: 1em;
 .floorOptions .floor {
   margin: .2em;
 }
+
+/* Map CSS */
+
+#root, #app, #map {
+  height: 100%;
+}
+

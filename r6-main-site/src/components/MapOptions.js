@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Button, Dropdown } from 'semantic-ui-react';
 import FloorButtons from './FloorButtons';
 
+
 class MapOptions extends Component {
   
   render(){
