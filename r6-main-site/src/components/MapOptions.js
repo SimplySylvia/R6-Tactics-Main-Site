@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { Button, Dropdown } from 'semantic-ui-react';
 import FloorButtons from './FloorButtons';
+import BombButtons from './BombButtons';
+import SecureButtons from './SecureButtons';
 
 
 class MapOptions extends Component {
@@ -45,32 +47,15 @@ class MapOptions extends Component {
       )
     });
 
-    // gather bomb info and create dropdown
-    const bomblocations = Object.values(this.props.map.bombsites);
-    const bombOptions = [];
-    const createbombObject = bomblocations.map((bomblocation)=>{
-      bombOptions.push(
-          {
-            text: bomblocation.assignment + ' A: ' + bomblocation.a + ' B: ' + bomblocation.b,
-            value: bomblocation.assignment + ' A: ' + bomblocation.a + ' B: ' + bomblocation.b,
-          }
-      )
-    });
-
-    
 
     return(
       <section className='mapOptions'>
         <h1>Floors</h1>
         <FloorButtons floors={this.props.map.floors} selectedFloor={this.props.selectedFloor} onSelectFloor={this.props.onSelectFloor}/>
         <h1>Bomb Locations</h1>
-        <div className='bombLocations'>
-        <Dropdown className='bombDropDown' placeholder='Select Location' fluid selection options={bombOptions} />
-        </div>
+        <BombButtons bombs={this.props.map.bombsites} selectedBomb={this.props.selectedBomb} onSelectBomb={this.props.onSelectBomb}/>
         <h1>Secure Area</h1>
-        <div className='saLocations'>
-        <Dropdown className='saDropDown' placeholder='Select Location' fluid selection options={saOptions} />
-        </div>
+        <SecureButtons secureareas={this.props.map.securearea} selectedSecure={this.props.selectedSecure} onSelectSecure={this.props.onSelectSecure}/>
         <h1>Hostage</h1>
         <div className='hosLocations'>
         <Dropdown className='hosDropDown' placeholder='Select Location' fluid selection options={hosOptions} />
