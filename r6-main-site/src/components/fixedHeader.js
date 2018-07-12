@@ -17,8 +17,8 @@ const FixedMenuLayout = () => (
         {/* drop down menu */}
         <Dropdown item simple text='Community'>
           <Dropdown.Menu>
-            <Dropdown.Item>Strats</Dropdown.Item>
-            <Dropdown.Item>Forum</Dropdown.Item>
+            <Dropdown.Item><Link className="subMenu" to={'/Strats'}>Strats</Link></Dropdown.Item>
+            <Dropdown.Item><Link className="subMenu" to={'/Forum'}>Forum</Link></Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         {/* drop down operators */}

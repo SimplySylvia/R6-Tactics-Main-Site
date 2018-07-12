@@ -7,6 +7,8 @@ import AtkOpDetailContainer from '../containers/AtkOpDetailContainer';
 import DefOpDetailContainer from '../containers/DefOpDetailContainer';
 import MapContainer from '../containers/MapContainer';
 import MapDetailContainer from '../containers/MapDetailContainer';
+import StratsContainer from '../containers/StratsContainer';
+import ForumContainer from '../containers/ForumContainer';
 
 export default (
   <Switch>
@@ -17,5 +19,7 @@ export default (
       <Route path='/DefenseOp/:name' component={ DefOpDetailContainer }/>
       <Route path='/Maps' component={MapContainer}/>
       <Route path='/Map/:name' component={MapDetailContainer}/>
+      <Route path='/Strats' component={StratsContainer}/>
+      <Route path='/Forum' component={ForumContainer}/>
   </Switch>
 )
