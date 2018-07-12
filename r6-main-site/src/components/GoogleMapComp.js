@@ -32,6 +32,9 @@ class GoogleMapComp extends Component {
         if (this.props.selectedHostage !== prevProps.selectedHostage){
           this.createMap();
         }
+        if (this.props.selectedAtk !== prevProps.selectedAtk){
+          this.createMap();
+        }
         
       } 
 
@@ -144,7 +147,9 @@ class GoogleMapComp extends Component {
           var bombIcon = new window.google.maps.MarkerImage("http://localhost:8000/images/bomb.png", null, null, null, new window.google.maps.Size(43,70));
           var secureIcon = new window.google.maps.MarkerImage("http://localhost:8000/images/securearea.png", null, null, null, new window.google.maps.Size(55,70));
           var hostageIcon = new window.google.maps.MarkerImage("http://localhost:8000/images/hostage.png", null, null, null, new window.google.maps.Size(55,70));
-            // conditional statement for bomb site 3
+          var atkIcon = new window.google.maps.MarkerImage("http://localhost:8000/images/atk.png", null, null, null, new window.google.maps.Size(55,70));
+           
+          // conditional statement for bomb site 3
 
           if( this.props.selectedFloor === this.props.map.floors[0] && this.props.selectedBomb === this.props.map.bombsites[2]){
 
@@ -308,7 +313,61 @@ class GoogleMapComp extends Component {
 
               } 
 
+               // conditional statement for Atk1
+            
+            if(this.props.selectedAtk === this.props.map.atkspawns.atkspawn1){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: -10, lng: -18},
+                map: map,
+                title: '3A',
+                icon: atkIcon,
+                        });
+
+              }
+
+               // conditional statement for Atk2
+            
+            if(this.props.selectedAtk === this.props.map.atkspawns.atkspawn2){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: 80, lng: -18},
+                map: map,
+                title: '3A',
+                icon: atkIcon,
+                        });
+
+              }
+
+                // conditional statement for Atk3
+            
+            if(this.props.selectedAtk === this.props.map.atkspawns.atkspawn3){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: -10, lng: 60},
+                map: map,
+                title: '3A',
+                icon: atkIcon,
+                        });
+
+              }
+              // conditional statement for Atk3
+            
+            if(this.props.selectedAtk === this.props.map.atkspawns.atkspawn4){
+
+              let marker1 = new window.google.maps.Marker({
+                position: {lat: 18, lng: 80},
+                map: map,
+                title: '3A',
+                icon: atkIcon,
+                        });
+
+              }
+
+
+
       }
+      
 
       
 

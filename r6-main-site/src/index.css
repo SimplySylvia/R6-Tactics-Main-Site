@@ -14,7 +14,6 @@ body {
   background-repeat: no-repeat;
   color: white;
   height: 100vh;
-
   font-family: 'Encode Sans Condensed', sans-serif !important;
 }
 body ::-webkit-scrollbar {
@@ -45,6 +44,82 @@ i.icon {
 }
 .ui .logo {
   filter: invert(100%);
+}
+/* Home Page */
+.home {
+  margin-top: 7vh;
+  height: 100%;
+}
+.fullscreen-video-wrap{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  margin-bottom: -20vh;
+}
+.fullscreen-video-wrap video{
+   /* Make video to at least 100% wide and tall */
+   min-width: 100%; 
+   min-height: 100%; 
+   
+   /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+   width: auto;
+   height: auto;
+   
+   /* Center the video */
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.overlay{
+  margin-top: 7vh;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #1B1C1D;
+  z-index: 1;
+  opacity: .8;
+}
+.overlayContent{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+}
+.home1, .home2{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 1em auto;
+  height: 45vh;
+}
+article{
+  padding: 1em;
+  border-radius: .2em;
+  width: 45%;
+}
+.overlayContent article h1{
+  font-size: 3em;
+  text-align: center;
+}
+.overlayContent article img{
+  width: 100%;
+  height: 100%;
+}
+.home1{
+  text-align: right;
+}
+.homeheader{
+  height: 10vh;
+  width: 100%;
 }
 /* op containers */
 .imgCol {
@@ -452,6 +527,9 @@ font-size: 1em;
 }
 .maps{
   margin-top: 1.5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 /* map card */
 .mapcard{

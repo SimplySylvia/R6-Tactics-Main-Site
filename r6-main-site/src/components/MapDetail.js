@@ -76,13 +76,14 @@ class MapDetail extends Component {
     return(
 
   <div className="mapDetailPage">
-  <div className="mapDetailHeader">
-      <h3>{this.props.map.name}</h3>
-  </div>
+  
   <section>
   <section className='drawingSec'>
     <ToggleDraw toggleCanDraw={this.toggleCanDraw} canDraw={this.state.canDraw} selectedColor={this.state.selectedColor} colorChoice={this.colorChoice}/>
     </section>
+    <div className="mapDetailHeader">
+      <h3>{this.props.map.name}</h3>
+  </div>
   <section className='createBut'>
     <Button className='creAtkBut'>Create Attack Plan</Button>
     <Button className='creDefBut'>Create Defense Plan</Button>
