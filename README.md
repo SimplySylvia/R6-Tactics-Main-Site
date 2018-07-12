@@ -35,6 +35,7 @@
 * Users will be able to save their created maps into "strats" and then get feedback on them from other players
 * Users will be able to comment and create counter Strats 
 * Users will be able to have a Community Section where they can share all their R6 creator content
+* Mobile Adoption with touch support for the map editor throught react native
 
 
 ## Cool Code Snippets
