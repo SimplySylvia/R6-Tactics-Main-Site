@@ -6,7 +6,6 @@ class DefOpDeatil extends Component {
   
 
   render(){
-    console.log(`here is a prop:`, this.props.defop)
     const SpeedRating = (this.props.defop.SpeedRating * 33) + 1
     Math.round(SpeedRating);
     const ArmorRating = (this.props.defop.ArmorRating * 33) + 1
