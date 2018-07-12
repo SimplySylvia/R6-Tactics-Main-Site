@@ -83,7 +83,7 @@ i.icon {
   left: 0;
   background: #1B1C1D;
   z-index: 1;
-  opacity: .8;
+  opacity: .6;
 }
 .overlayContent{
   position: absolute;
@@ -671,7 +671,6 @@ font-size: 1em;
 #root, #app, #map {
   height: 100%;
 }
-
 
 /* Strat Container */
 

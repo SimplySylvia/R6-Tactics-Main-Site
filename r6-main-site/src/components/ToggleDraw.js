@@ -24,6 +24,7 @@ class ToggleDraw extends Component {
    }
     this.props.toggleCanDraw(this.state.togglestate)
  }
+ 
  colorChange(color){
   this.setState({
     color: color,

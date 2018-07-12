@@ -20,7 +20,7 @@
 
 ## Project Planning
 
-[Wireframes](https://drive.google.com/open?id=1XtcfO4-FAsR1xSGFzFRXLnW21xgaQUNq)
+[Project Folder](https://drive.google.com/open?id=1XtcfO4-FAsR1xSGFzFRXLnW21xgaQUNq)
 
 
 ## Existing Features
