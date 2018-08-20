@@ -10,9 +10,13 @@
 
 <img src='assets/r6home.png' width='400px'>
 
-## Operator Page Example
+## Operator Selection Page Example
 
 <img src='assets/r6ops.png' width='400px'>
+
+## Individual Operator Page Example
+
+<img src='assets/r6op.png' width='400px'>
 
 ## Map Selection Page
 
