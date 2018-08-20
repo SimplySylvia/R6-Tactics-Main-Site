@@ -14,7 +14,7 @@ class MapDetail extends Component {
       selectedAtk: '',
       selectedHostage: '',
       canDraw: false,
-      selectedColor: 'red',
+      selectedColor: 'blue',
     }
     this.toggleCanDraw = this.toggleCanDraw.bind(this);
     this.onSelectFloor = this.onSelectFloor.bind(this);

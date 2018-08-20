@@ -21,6 +21,7 @@ body ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
 }
+
 /* Header */
 .subMenu{
  color: black !important;
@@ -45,6 +46,7 @@ i.icon {
 .ui .logo {
   filter: invert(100%);
 }
+
 /* Home Page */
 .home {
   margin-top: 7vh;
@@ -131,6 +133,7 @@ article{
   height: 10vh;
   width: 100%;
 }
+
 /* op containers */
 .imgCol {
   height: 100%;

@@ -4,7 +4,23 @@
 
 * A site built for players to plan their next game and share with the community around them. 
 
-[Link to project hosted]()
+<!-- [Link to project hosted]() -->
+
+## Home Page
+
+<img src='assets/r6home.png' width='400px'>
+
+## Operator Page Example
+
+<img src='assets/r6ops.png' width='400px'>
+
+## Map Selection Page
+
+<img src='assets/r6OMaps.png' width='400px'>
+
+## Map Planner example
+
+<img src='assets/r6Planner.png' width='400px'>
 
 ## Technologies Used
 
@@ -40,6 +56,7 @@
 
 ## Cool Code Snippets
 How the Map works on saving state and updating to view floors. Due to limitations on React Maps regular maps was used. 
+
 ```javascript
 //save img location as variable updated by current state
 const floorimg = `http://localhost:8000${this.props.selectedFloor.img}`

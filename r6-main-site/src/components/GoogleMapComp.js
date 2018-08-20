@@ -363,14 +363,7 @@ class GoogleMapComp extends Component {
                         });
 
               }
-
-
-
       }
-      
-
-      
-
   render(){
     //render out the div with the idea so the div is being created when the function is ran solving nonrender issue
     //<div id='map' />
