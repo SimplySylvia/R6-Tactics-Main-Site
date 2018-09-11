@@ -17,7 +17,7 @@ class OpDetailContainer extends Component {
     (`http://localhost:8000/api/atkops/${id}`)
 
     .then(response => response.json())
-    .then(info => this.setState({atkop : [info]} ))
+    .then(info => this.setState({atkop : [info.data]} ))
     
     console.log('here is the state of the op',this.state.atkop);
   }

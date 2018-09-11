@@ -18,7 +18,7 @@ class MapContainer extends Component{
         MapModel.all().then( (res) => {
           console.log('Here is the res:',res.data)
           this.setState ({
-            maps: res.data,
+            maps: res.data.data,
             map: ''
           })
         })

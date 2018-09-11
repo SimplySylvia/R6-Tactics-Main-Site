@@ -367,8 +367,6 @@ class GoogleMapComp extends Component {
   render(){
     //render out the div with the idea so the div is being created when the function is ran solving nonrender issue
     //<div id='map' />
-    console.log( 'here is the securearea',this.props.map.securearea.area1)
-    console.log( 'here is the securearea prop',this.props.selectedSecure)
     return(
         <div id='app'>
         <div id='map'>

@@ -18,7 +18,7 @@ class OpsContainer extends Component{
         DefopModel.all().then( (res) => {
           console.log('Here is the res:',res)
           this.setState ({
-            defops: res.data,
+            defops: res.data.data,
             defop: ''
           })
         })

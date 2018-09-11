@@ -17,7 +17,7 @@ class MapDetailContainer extends Component {
     (`http://localhost:8000/api/smaps/${id}`)
 
     .then(response => response.json())
-    .then(info => this.setState({map : [info]} ))
+    .then(info => this.setState({map : [info.data]} ))
     
     console.log('here is the state of the map',this.state.map);
   }
