@@ -1,21 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed');
-html{
-  background: linear-gradient(rgb(14, 14, 16),rgb(28, 34, 43));
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Condensed");
+html {
+  background: linear-gradient(#0e0e10, #1c222b);
 }
-*{
-  box-sizing: border-box;
 
-  font-family: 'Encode Sans Condensed', sans-serif !important;
+* {
+  box-sizing: border-box;
+  font-family: "Encode Sans Condensed", sans-serif !important;
 }
+
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(rgb(14, 14, 16),rgb(28, 34, 43));
+  background: linear-gradient(#0e0e10, #1c222b);
   background-repeat: no-repeat;
   color: white;
   height: 100vh;
-  font-family: 'Encode Sans Condensed', sans-serif !important;
+  font-family: "Encode Sans Condensed", sans-serif !important;
 }
+
 body ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 0px;
@@ -23,26 +25,32 @@ body ::-webkit-scrollbar {
 }
 
 /* Header */
-.subMenu{
- color: black !important;
+.subMenu {
+  color: black !important;
 }
+
 i.icon {
   font-family: Icons !important;
 }
-.ui.button { 
-  border-radius: 0; 
+
+.ui.button {
+  border-radius: 0;
 }
-.right .button{
-  margin-left: .5em !important;
+
+.right .button {
+  margin-left: 0.5em !important;
 }
-.landingImg{
+
+.landingImg {
   width: 100%;
   max-height: 93vh;
 }
-.menu{
+
+.menu {
   height: 7vh;
-  font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif !important;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif !important;
 }
+
 .ui .logo {
   filter: invert(100%);
 }
@@ -52,31 +60,32 @@ i.icon {
   margin-top: 7vh;
   height: 100%;
 }
-.fullscreen-video-wrap{
+
+.fullscreen-video-wrap {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
   overflow: hidden;
   margin-bottom: -20vh;
 }
-.fullscreen-video-wrap video{
-   /* Make video to at least 100% wide and tall */
-   min-width: 100%; 
-   min-height: 100%; 
-   
-   /* Setting width & height to auto prevents the browser from stretching or squishing the video */
-   width: auto;
-   height: auto;
-   
-   /* Center the video */
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%,-50%);
+
+.fullscreen-video-wrap video {
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto;
+  height: auto;
+  /* Center the video */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.overlay{
+
+.overlay {
   margin-top: 7vh;
   position: absolute;
   height: 100%;
@@ -85,9 +94,10 @@ i.icon {
   left: 0;
   background: #1B1C1D;
   z-index: 1;
-  opacity: .6;
+  opacity: 0.6;
 }
-.overlayContent{
+
+.overlayContent {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -96,40 +106,49 @@ i.icon {
   overflow: scroll;
   z-index: 3;
 }
-.home1, .home2{
+
+.home1, .home2 {
   display: flex;
   flex-direction: row;
   width: 90%;
   margin: 1em auto;
   height: 45vh;
 }
-article{
+
+article {
   padding: 1em;
-  border-radius: .2em;
+  border-radius: 0.2em;
   width: 45%;
 }
-.overlayContent article h1{
+
+.overlayContent article h1 {
   font-size: 3em;
   text-align: center;
 }
-.atkbut{
+
+.atkbut {
   background-color: #AA511F !important;
 }
-.defbut{
+
+.defbut {
   background-color: #245EAF !important;
 }
-.rankimg{
+
+.rankimg {
   width: 10vh !important;
   height: 10vh !important;
 }
-.overlayContent article img{
+
+.overlayContent article img {
   width: 100%;
   height: 100%;
 }
-.home1{
+
+.home1 {
   text-align: right;
 }
-.homeheader{
+
+.homeheader {
   height: 10vh;
   width: 100%;
 }
@@ -140,19 +159,22 @@ article{
   width: 100%;
   position: relative;
 }
-.opImg{
+
+.opImg {
   width: 100%;
   height: 100%;
   left: 0;
   bottom: 0;
   position: absolute;
 }
-.opscontainer{
+
+.opscontainer {
   max-height: 93vh;
   position: fixed;
   margin-top: 7vh;
-  font-family: 'Encode Sans Condensed', sans-serif !important;
+  font-family: "Encode Sans Condensed", sans-serif !important;
 }
+
 .opsList {
   display: flex;
   flex-direction: row;
@@ -163,6 +185,7 @@ article{
   overflow: scroll;
   max-height: 95vh;
 }
+
 .ops {
   margin: 0 auto;
   margin-top: 10vh;
@@ -175,7 +198,7 @@ article{
   background-image: url(/images/r6-siege-v3-generic-bg.jpg);
   background-repeat: no-repeat;
   color: white;
-  margin: .5em;
+  margin: 0.5em;
   padding: 0 1em;
   height: 25vh;
   width: 50vh;
@@ -185,9 +208,10 @@ article{
   color: white;
   line-height: 1em;
 }
-.opCardInfo{
+
+.opCardInfo {
   background: rgba(10, 10, 10, 0.5);
-  padding: .5em;
+  padding: 0.5em;
 }
 
 .btn {
@@ -204,10 +228,11 @@ article{
   z-index: 10;
 }
 
-.atkHeader h3{
+.atkHeader h3 {
   margin: 0;
   font-size: 3.5em;
 }
+
 .defHeader {
   background: #245EAF;
   height: 10vh;
@@ -217,24 +242,26 @@ article{
   width: 100%;
   z-index: 10;
 }
-.defHeader h3{
+
+.defHeader h3 {
   margin: 0;
   font-size: 3.5em;
 }
+
 .atkops {
   height: 91vh;
   position: static;
 }
-.atkopsList{
+
+.atkopsList {
   height: 100%;
 }
+
 .hide {
   display: none;
 }
 
 /* Op Card */
-
-
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -243,13 +270,12 @@ article{
   padding-top: 40px;
   padding-bottom: 40px;
   margin: 2em;
-
 }
- li {
-   text-align: left;
-   font-size: 1.3em;
- }
 
+li {
+  text-align: left;
+  font-size: 1.3em;
+}
 
 .op-card {
   background: whitesmoke;
@@ -262,6 +288,7 @@ article{
   text-align: center;
   box-shadow: -1px 15px 30px -12px black;
 }
+
 .op-card:hover {
   transform: scale(1.1);
 }
@@ -274,12 +301,11 @@ article{
 
 .op-card__image {
   background: url(/images/r6-siege-v3-generic-bg.jpg);
-  
 }
 
 .op-card__image > img {
   width: 190px;
-  position: absolute;    
+  position: absolute;
   top: -64px;
   left: -22px;
 }
@@ -291,20 +317,24 @@ article{
   margin-bottom: 3px;
   margin-top: 10px;
 }
+
 .op-card__gadget-title {
   font-size: 1.3em;
   color: black;
   margin-bottom: 5px;
   margin-top: 10px;
 }
+
 ul {
   list-style-type: none;
 }
-.gadget-name{
+
+.gadget-name {
   padding-left: 10px;
   text-emphasis: wrap;
   margin-top: 1em;
 }
+
 .op-card__unit-name {
   font-size: 2em;
   color: black;
@@ -317,19 +347,22 @@ ul {
   color: white;
   font-weight: 700;
   background: url(/images/r6-siege-v3-generic-bg.jpg);
-  
 }
-.organization{
+
+.organization {
   height: 100%;
 }
+
 .one-third {
   width: 30%;
   float: left;
   padding: 20px 15px;
 }
+
 .one-half {
   width: 50%;
 }
+
 .one-half img {
   margin: 0 auto;
 }
@@ -351,39 +384,43 @@ ul {
 }
 
 .clearfix:after {
-	visibility: hidden !important;
-	display: block !important;
-	font-size: 0 !important;
-	content: " " !important;
-	clear: both !important;
-	height: 0 !important;
+  visibility: hidden !important;
+  display: block !important;
+  font-size: 0 !important;
+  content: " " !important;
+  clear: both !important;
+  height: 0 !important;
 }
 
 /* Op Deatil Page */
-.opDetail{
+.opDetail {
   margin-top: 7vh;
   height: 93vh;
-  font-family: 'Encode Sans Condensed', sans-serif !important;
+  font-family: "Encode Sans Condensed", sans-serif !important;
 }
-.oppage{
 
-  font-family: 'Encode Sans Condensed', sans-serif !important;
+.oppage {
+  font-family: "Encode Sans Condensed", sans-serif !important;
 }
+
 .segment {
   display: flex;
   color: black;
   height: 15%;
 }
-.progress{
+
+.progress {
   height: 30px;
   width: 100%;
   margin-left: 1em;
 }
-.opHeader{
+
+.opHeader {
   width: 60%;
   height: 60vh;
 }
-.opHeaderName{
+
+.opHeaderName {
   z-index: 10;
   font-size: 3em;
   background: rgba(10, 10, 10, 0.5);
@@ -395,98 +432,115 @@ ul {
   width: 20%;
   text-align: center;
 }
-.stats{
+
+.stats {
   width: 25%;
   height: 60vh;
   margin-left: 10% !important;
 }
-.opImgHeader{
+
+.opImgHeader {
   width: 100%;
   height: 100%;
 }
-.topdetail{
+
+.topdetail {
   display: flex;
   flex-direction: row;
   background-color: #245EAF;
-  background: linear-gradient(#245EAF,rgb(14, 14, 16));
-  -webkit-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
-  -moz-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
-  box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+  background: linear-gradient(#245EAF, #0e0e10);
+  -webkit-box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.29);
 }
-.atkertop{
-  background: linear-gradient(#AA511F,rgb(14, 14, 16));
+
+.atkertop {
+  background: linear-gradient(#AA511F, #0e0e10);
 }
-.backgroundOp{
+
+.backgroundOp {
   width: 100%;
   display: flex;
   background-position: left;
   background-position-y: 0;
   background-size: inherit;
   background-repeat: no-repeat;
-  -webkit-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
-  -moz-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
-  box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+  -webkit-box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 6px 6px 1px rgba(0, 0, 0, 0.29);
 }
-.org{
+
+.org {
   margin-left: 1em;
   margin-top: 0;
 }
-.content{
+
+.content {
   font-size: 2em;
   color: black;
 }
-.opbadgeheader{
+
+.opbadgeheader {
   height: 15vh;
   position: absolute;
   bottom: 220px;
 }
-.biomodal{
+
+.biomodal {
   height: 30vh;
 }
-.biobutt{
+
+.biobutt {
   margin: 0 auto !important;
   width: 60%;
   color: white !important;
   background: #245EAF !important;
 }
+
 /* mid detail op section */
-.mid-detail{
+.mid-detail {
   display: flex;
   flex-direction: column;
   height: 60vh;
   background: url(/images/r6-siege-v3-generic-bg.jpg);
   padding-top: 2em;
 }
-.priweapons, .secweapons, .gadgets{
+
+.priweapons, .secweapons, .gadgets {
   margin: 0 !important;
   width: 20% !important;
 }
-.priweapons .segment, .secweapons .segment, .gadgets .segment{
+
+.priweapons .segment, .secweapons .segment, .gadgets .segment {
   height: 20vh;
   display: flex;
   flex-direction: column;
   text-align: center;
   font-size: 1em !important;
-  
 }
-.priweapons .segment h1, .secweapons .segment h1, .gadgets .segment h1{
-font-size: 1em;
+
+.priweapons .segment h1, .secweapons .segment h1, .gadgets .segment h1 {
+  font-size: 1em;
 }
-.priweapons .segment img , .secweapons .segment img , .gadgets .segment img{
+
+.priweapons .segment img, .secweapons .segment img, .gadgets .segment img {
   width: 70%;
   margin: 0 auto;
 }
-.gadgets .segment img{
+
+.gadgets .segment img {
   width: 50%;
   margin: 0 auto;
 }
-.weapons{
+
+.weapons {
   display: flex;
   flex-direction: row;
   height: 100%;
   text-align: center;
 }
-.uniqueability{
+
+.uniqueability {
   display: flex;
   flex-direction: column;
   margin-right: 2%;
@@ -495,11 +549,13 @@ font-size: 1em;
   text-align: center;
   height: 100%;
 }
-.uniqueability h2{
+
+.uniqueability h2 {
   margin: 0;
   font-size: 2em;
 }
-.gadgetimg{
+
+.gadgetimg {
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -508,61 +564,71 @@ font-size: 1em;
   padding: 5vh;
   font-size: 1.5em;
 }
-.gadgetdesc{
+
+.gadgetdesc {
   height: 20vh;
 }
+
 .gadgetdesc p {
-  padding: .5em;
+  padding: 0.5em;
 }
-.gadgets{
+
+.gadgets {
   margin-right: 2% !important;
 }
-.gadgets img{
+
+.gadgets img {
   width: 100%;
 }
+
 /* map container */
-.mapHeader{
+.mapHeader {
   width: 100%;
   height: 7vh;
   text-align: center;
   background: #245EAF;
   display: flex;
 }
-.mapHeader h3{
+
+.mapHeader h3 {
   margin: auto auto;
   color: whitesmoke;
   font-size: 2em;
   text-align: center;
 }
-.mapcontainer{
+
+.mapcontainer {
   margin-top: 7vh;
   max-height: 93vh;
 }
-.maps{
+
+.maps {
   margin-top: 1.5em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 /* map card */
-.mapcard{
+.mapcard {
   width: 30vh;
   height: 20vh;
   text-align: center;
   border: none;
   margin: 1em auto;
   border-radius: 1vh;
-  
 }
+
 .text-shadow {
-  text-shadow: .1em .1em rgba(0, 0, 0, 0.507);
+  text-shadow: 0.1em 0.1em rgba(0, 0, 0, 0.507);
   font-size: 2em;
-  }
+}
 
 .flip {
   position: relative;
   display: flex;
 }
+
 .front {
   background-size: cover;
   display: flex;
@@ -570,161 +636,127 @@ font-size: 1em;
   width: 100%;
   height: 20vh;
 }
+
 .front h1 {
   margin: auto auto;
   color: whitesmoke;
   font-size: 3em;
   text-align: center;
 }
+
 .mapcard:hover {
   transform: scale(1.1);
 }
+
 /* detail map page */
-.mapDetailContainer{
+.mapDetailContainer {
   margin-top: 7vh;
   max-height: 93vh;
 }
-.mapDetailHeader{
+
+.mapDetailHeader {
   width: 100%;
   height: 7vh;
   text-align: center;
   display: flex;
   background-color: #AA511F;
 }
-.mapDetailPage section{
+
+.mapDetailPage section {
   display: flex;
 }
-.mapDetailHeader h3{
+
+.mapDetailHeader h3 {
   margin: auto auto;
   color: whitesmoke;
   font-size: 2em;
   text-align: center;
 }
+
 /* buttons for atk plan and defense plan */
-.createBut{
+.createBut {
   display: flex;
   flex-direction: row;
   flex-flow: row-reverse;
-  margin: .5em .2em;
+  margin: 0.5em 0.2em;
   width: 50%;
 }
-.drawingSec{
+
+.drawingSec {
   display: flex;
   flex-direction: row;
   flex-flow: row;
-  margin: .5em .2em;
+  margin: 0.5em 0.2em;
   width: 50%;
   color: black;
 }
-.creAtkBut{
+
+.creAtkBut {
   background: #AA511F !important;
   color: white !important;
 }
-.creDefBut{
+
+.creDefBut {
   background: #245EAF !important;
   color: white !important;
 }
+
 /* div for maps */
-.mapSection{
+.mapSection {
   background: #36a9e0;
   display: flex !important;
   flex-direction: row !important;
   width: 100%;
 }
-.mapViewer{
+
+.mapViewer {
   width: 75%;
   height: 80vh;
   background: #245EAF;
-  padding: .5em;
+  padding: 0.5em;
 }
-.map{
+
+.map {
   background: white;
   color: black;
   width: 100%;
 }
-.map img{
+
+.map img {
   width: 100%;
   height: 100%;
 }
-.mapOptions{
+
+.mapOptions {
   width: 25%;
   display: flex;
   flex-direction: column;
   padding: 1em;
 }
-.mapOptions h1{
+
+.mapOptions h1 {
   font-size: 1.2em;
-  margin: .3em;
+  margin: 0.3em;
 }
-.floorOptions{
+
+.floorOptions {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
 .floorOptions .floor {
-  margin: .2em;
+  margin: 0.2em;
 }
 
-.secureLocations .ui.buttons, .hosLocations .ui.buttons, .atkLocations .ui.buttons{
+.secureLocations .ui.buttons, .hosLocations .ui.buttons, .atkLocations .ui.buttons {
   flex-wrap: wrap !important;
   border-radius: none !important;
 }
-/* Map CSS */
 
+/* Map CSS */
 #root, #app, #map {
   height: 100%;
 }
 
-/* Strat Container */
-
-.stratsContainer{
-  margin-top: 7vh;
-
-}
-.stratsContainer h1{
-  text-align: center;
-  background-color: red;
-  padding: .5em;
-}
-.stratsContainer h2{
-  text-align: center;
-  padding: .5em;
-}
-.columns{
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  width: 100%;
-}
-.stratscol{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0 .5em;
-  background: white;
-  color: black;
-}
-.atkstrats h2{
-  background-color: #AA511F;
-  color: white;
-}
-.defstrats h2{
-  background-color: #245EAF;
-  color: white;
-}
-.stratcard{
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-.stratcard h3{
-  width: 100%;
-  text-align: left;
-}
-.maincardsect{
- width: 75%;
-}
-.stratcard aside{
-  width: 25%;
-  background-color: whitesmoke;
-}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,53 @@
+/* Strat Container */
+
+.stratsContainer{
+    margin-top: 7vh;
+  
+  }
+  .stratsContainer h1{
+    text-align: center;
+    background-color: red;
+    padding: .5em;
+  }
+  .stratsContainer h2{
+    text-align: center;
+    padding: .5em;
+  }
+  .columns{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .stratscol{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 .5em;
+    background: white;
+    color: black;
+  }
+  .atkstrats h2{
+    background-color: #AA511F;
+    color: white;
+  }
+  .defstrats h2{
+    background-color: #245EAF;
+    color: white;
+  }
+  .stratcard{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .stratcard h3{
+    width: 100%;
+    text-align: left;
+  }
+  .maincardsect{
+   width: 75%;
+  }
+  .stratcard aside{
+    width: 25%;
+    background-color: whitesmoke;
+  }

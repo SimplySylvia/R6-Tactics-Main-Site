@@ -1,0 +1,160 @@
+/* Op Deatil Page */
+.opDetail{
+    margin-top: 7vh;
+    height: 93vh;
+    font-family: $font-main;
+  }
+  .oppage{
+    font-family: $font-main;
+  }
+  .segment {
+    display: flex;
+    color: black;
+    height: 15%;
+  }
+  .progress{
+    height: 30px;
+    width: 100%;
+    margin-left: 1em;
+  }
+  .opHeader{
+    width: 60%;
+    height: 60vh;
+  }
+  .opHeaderName{
+    z-index: 10;
+    font-size: 3em;
+    background: rgba(10, 10, 10, 0.5);
+    color: white;
+    margin: 0 auto;
+    top: 0;
+    position: absolute;
+    margin-top: 7vh !important;
+    width: 20%;
+    text-align: center;
+  }
+  .stats{
+    width: 25%;
+    height: 60vh;
+    margin-left: 10% !important;
+  }
+  .opImgHeader{
+    width: 100%;
+    height: 100%;
+  }
+  .topdetail{
+    display: flex;
+    flex-direction: row;
+    background-color: #245EAF;
+    background: linear-gradient(#245EAF,rgb(14, 14, 16));
+    -webkit-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+    box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+  }
+  .atkertop{
+    background: linear-gradient(#AA511F,rgb(14, 14, 16));
+  }
+  .backgroundOp{
+    width: 100%;
+    display: flex;
+    background-position: left;
+    background-position-y: 0;
+    background-size: inherit;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+    -moz-box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+    box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.29);
+  }
+  .org{
+    margin-left: 1em;
+    margin-top: 0;
+  }
+  .content{
+    font-size: 2em;
+    color: black;
+  }
+  .opbadgeheader{
+    height: 15vh;
+    position: absolute;
+    bottom: 220px;
+  }
+  .biomodal{
+    height: 30vh;
+  }
+  .biobutt{
+    margin: 0 auto !important;
+    width: 60%;
+    color: white !important;
+    background: #245EAF !important;
+  }
+  /* mid detail op section */
+  .mid-detail{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    background: url(/images/r6-siege-v3-generic-bg.jpg);
+    padding-top: 2em;
+  }
+  .priweapons, .secweapons, .gadgets{
+    margin: 0 !important;
+    width: 20% !important;
+  }
+  .priweapons .segment, .secweapons .segment, .gadgets .segment{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1em !important;
+    
+  }
+  .priweapons .segment h1, .secweapons .segment h1, .gadgets .segment h1{
+  font-size: 1em;
+  }
+  .priweapons .segment img , .secweapons .segment img , .gadgets .segment img{
+    width: 70%;
+    margin: 0 auto;
+  }
+  .gadgets .segment img{
+    width: 50%;
+    margin: 0 auto;
+  }
+  .weapons{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    text-align: center;
+  }
+  .uniqueability{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+    margin-left: 2%;
+    width: 40%;
+    text-align: center;
+    height: 100%;
+  }
+  .uniqueability h2{
+    margin: 0;
+    font-size: 2em;
+  }
+  .gadgetimg{
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    height: 18vh;
+    padding: 5vh;
+    font-size: 1.5em;
+  }
+  .gadgetdesc{
+    height: 20vh;
+  }
+  .gadgetdesc p {
+    padding: .5em;
+  }
+  .gadgets{
+    margin-right: 2% !important;
+  }
+  .gadgets img{
+    width: 100%;
+  }

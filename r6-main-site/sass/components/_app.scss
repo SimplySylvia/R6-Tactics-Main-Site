@@ -1,0 +1,21 @@
+html{
+    background: linear-gradient(rgb(14, 14, 16),rgb(28, 34, 43));
+  }
+  *{
+    box-sizing: border-box;
+    font-family: $font-main;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgb(14, 14, 16),rgb(28, 34, 43));
+    background-repeat: no-repeat;
+    color: white;
+    height: 100vh;
+    font-family: $font-main;
+  }
+  body ::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 0px;
+    height: 0px;
+  }

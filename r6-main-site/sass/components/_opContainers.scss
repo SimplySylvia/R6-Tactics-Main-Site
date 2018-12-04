@@ -1,0 +1,98 @@
+/* op containers */
+.imgCol {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .opImg{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  .opscontainer{
+    max-height: 93vh;
+    position: fixed;
+    margin-top: 7vh;
+    font-family: 'Encode Sans Condensed', sans-serif !important;
+  }
+  .opsList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 2em;
+    align-items: flex-start;
+    overflow: scroll;
+    max-height: 95vh;
+  }
+  .ops {
+    margin: 0 auto;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .opCard {
+    background-image: url(/images/r6-siege-v3-generic-bg.jpg);
+    background-repeat: no-repeat;
+    color: white;
+    margin: .5em;
+    padding: 0 1em;
+    height: 25vh;
+    width: 50vh;
+  }
+  
+  .opCard p {
+    color: white;
+    line-height: 1em;
+  }
+  .opCardInfo{
+    background: rgba(10, 10, 10, 0.5);
+    padding: .5em;
+  }
+  
+  .btn {
+    background-color: #36a9e0;
+  }
+  
+  .atkHeader {
+    background: #AA511F;
+    height: 10vh;
+    text-align: center;
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .atkHeader h3{
+    margin: 0;
+    font-size: 3.5em;
+  }
+  .defHeader {
+    background: #245EAF;
+    height: 10vh;
+    text-align: center;
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 10;
+  }
+  .defHeader h3{
+    margin: 0;
+    font-size: 3.5em;
+  }
+  .atkops {
+    height: 91vh;
+    position: static;
+  }
+  .atkopsList{
+    height: 100%;
+  }
+  .hide {
+    display: none;
+  }
+  

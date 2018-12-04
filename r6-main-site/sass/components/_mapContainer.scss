@@ -1,0 +1,24 @@
+/* map container */
+.mapHeader{
+    width: 100%;
+    height: 7vh;
+    text-align: center;
+    background: #245EAF;
+    display: flex;
+  }
+  .mapHeader h3{
+    margin: auto auto;
+    color: whitesmoke;
+    font-size: 2em;
+    text-align: center;
+  }
+  .mapcontainer{
+    margin-top: 7vh;
+    max-height: 93vh;
+  }
+  .maps{
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
