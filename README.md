@@ -2,6 +2,8 @@
 
 # Welcome to the React Site for R6 META. 
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/DaltonHart/R6-Tactics-Main-Site.svg)](https://greenkeeper.io/)
+
 * A site built for players to plan their next game and share with the community around them. 
 
 <!-- [Link to project hosted]() -->
