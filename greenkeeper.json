@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "r6-main-site/package.json"
+      ]
+    }
+  }
+}
