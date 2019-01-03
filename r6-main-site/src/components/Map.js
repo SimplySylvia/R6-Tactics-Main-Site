@@ -8,7 +8,7 @@ class Map extends Component {
     const mapimg = `http://localhost:8000${this.props.map.coverimg}`
     const link = `/Map/${this.props.map.name}`;
     console.log(`here is the map id`,this.props.map._id);
-    var divStyle = {
+    let divStyle = {
       backgroundImage: `url(${mapimg})`
     };
 

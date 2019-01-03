@@ -9,7 +9,6 @@ class HostageButton extends Component {
  
  selectHostage(){
     this.props.onSelectHostage(this.props.hostage)
-    console.log("YOOOO", this.props.hostage )
  }
 
   render(){

@@ -16,7 +16,6 @@ class MapContainer extends Component{
     
       fetchData(){
         MapModel.all().then( (res) => {
-          console.log('Here is the res:',res.data)
           this.setState ({
             maps: res.data.data,
             map: ''

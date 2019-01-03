@@ -9,7 +9,6 @@ class BombButton extends Component {
  
  selectBomb(){
     this.props.onSelectBomb(this.props.bomb)
-    console.log("YOOOO", this.props.bomb )
  }
 
   render(){

@@ -7,13 +7,12 @@ const FixedMenuLayout = () => (
     {/* menu section */}
     <Menu fixed='top' inverted>
       <Container>
-        {/* menu item logo */}
-        <Menu.Item  header>
+        <Menu.Item>
           <Image className="logo" size='mini' src='./images/logo.png' style={{ marginRight: '1.5em' }} />
-          R6 META
         </Menu.Item>
-        {/* menu item home */}
-        <Menu.Item as='a'><Link to={'/'}>Home</Link></Menu.Item>
+        <Menu.Item header as='a'><Link to={'/'}>
+          R6 META
+        </Link></Menu.Item>
         {/* drop down menu */}
         <Dropdown item simple text='Community'>
           <Dropdown.Menu>

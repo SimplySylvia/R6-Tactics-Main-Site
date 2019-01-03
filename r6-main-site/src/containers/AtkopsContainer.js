@@ -16,7 +16,6 @@ class OpsContainer extends Component{
     
       fetchData(){
         AtkopModel.all().then( (res) => {
-          console.log('Here is the res:',res)
           this.setState ({
             atkops: res.data.data,
             atkop: ''

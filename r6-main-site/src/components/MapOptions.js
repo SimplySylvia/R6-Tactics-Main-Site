@@ -10,9 +10,6 @@ import AtkButtons from './AtkButtons';
 class MapOptions extends Component {
   
   render(){
-
-    console.log(`here is a prop:`, this.props.map);
-
     return(
       <section className='mapOptions'>
         <h1>Floors</h1>

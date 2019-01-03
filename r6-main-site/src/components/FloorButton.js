@@ -9,7 +9,6 @@ class FloorButton extends Component {
  
  selectFloor(){
     this.props.onSelectFloor(this.props.floor)
-    console.log("YOOOO", this.props.floor )
  }
 
   render(){

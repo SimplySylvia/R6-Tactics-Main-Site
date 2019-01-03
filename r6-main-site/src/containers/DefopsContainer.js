@@ -16,7 +16,6 @@ class OpsContainer extends Component{
     
       fetchData(){
         DefopModel.all().then( (res) => {
-          console.log('Here is the res:',res)
           this.setState ({
             defops: res.data.data,
             defop: ''
@@ -27,7 +26,6 @@ class OpsContainer extends Component{
     render(){
       return (
         <div className='opscontainer'>
-        {console.log('logged atk:',this.state.defops)}
         <div className="DefopsList">
         <Defops defops={this.state.defops}/>
         </div>

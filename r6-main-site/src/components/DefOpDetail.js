@@ -2,22 +2,52 @@ import React, {Component} from 'react';
 import { Segment, Button, Modal } from 'semantic-ui-react'
 import { ProgressBar } from 'react-bootstrap'
 
-class DefOpDeatil extends Component {
-  
-
+class DefOpDetail extends Component {
   render(){
+    const baseURL = `http://localhost:8000`
+
     const SpeedRating = (this.props.defop.SpeedRating * 33) + 1
     Math.round(SpeedRating);
     const ArmorRating = (this.props.defop.ArmorRating * 33) + 1
     Math.round(ArmorRating);
-    const opimg = `http://localhost:8000${this.props.defop.img}`
-    const opbadge = `http://localhost:8000${this.props.defop.badge}`
-    var divStyle = {
+
+    const opimg = `${baseURL}${this.props.defop.img}`
+    const opbadge = `${baseURL}${this.props.defop.badge}`
+
+    let divStyle = {
       backgroundImage: `url(${opimg})`
     };
-    var gadgetimg = {
-      backgroundImage: `url(http://localhost:8000${this.props.defop.gadget.img})`
+    let gadgetimg = {
+      backgroundImage: `url(${baseURL}${this.props.defop.ability.img})`
     };
+
+    let primaries = this.props.defop.primaries.map( (primary, i) => {
+      return (
+        <Segment>
+        <h1>{primary.name}</h1>
+        <img src={`${baseURL}${primary.img}`} />
+        </Segment>
+      )
+    })
+
+    let secondaries = this.props.defop.secondaries.map( (secondary, i) => {
+      return (
+        <Segment>
+        <h1>{secondary.name}</h1>
+        <img src={`${baseURL}${secondary.img}`} />
+        </Segment>
+      )
+    })
+
+    let gadgets = this.props.defop.gadgets.map( (gadget, i) => {
+      return (
+        <Segment>
+        <h1>{gadget.name}</h1>
+        <img src={`${baseURL}${gadget.img}`} />
+        </Segment>
+      )
+    })
+
     return(
 
   <div className="opPage">
@@ -48,6 +78,7 @@ class DefOpDeatil extends Component {
           <h2 className="org">{this.props.defop.Organization}</h2>
             
           </Segment>
+          
           <Segment className="bio">
           
           <Modal className="biomodal" trigger={<Button className="biobutt">Show Bio</Button>} centered={false}>
@@ -69,44 +100,23 @@ class DefOpDeatil extends Component {
         <section className="uniqueability">
           <h1>Unique Ability</h1>
           <div className="gadgetimg" style={gadgetimg}>
-          <h2>{this.props.defop.gadget.name}</h2>
+          <h2>{this.props.defop.ability.name}</h2>
           </div>
           <Segment className="gadgetdesc">
-            <p>{this.props.defop.gadget.desc}</p>
+            <p>{this.props.defop.ability.description}</p>
           </Segment>
           </section>
     <Segment.Group className="priweapons">
     <h1>Primary Weapons</h1>
-    <Segment>
-    <h1>{this.props.defop.primaries.pri1.name}</h1>
-    <img src={`http://localhost:8000${this.props.defop.primaries.pri1.img}`} />
-    </Segment>
-    <Segment>
-    <h1>{this.props.defop.primaries.pri2.name}</h1>
-    <img src={`http://localhost:8000${this.props.defop.primaries.pri2.img}`} />
-    </Segment>
+    {primaries}
     </Segment.Group>
     <Segment.Group className="secweapons">
     <h1>Secondary Weapons</h1>
-    <Segment>
-    <h1>{this.props.defop.secondaries.sec1.name}</h1>
-    <img src={`http://localhost:8000${this.props.defop.secondaries.sec1.img}`} />
-    </Segment>
-    <Segment>
-    <h1>{this.props.defop.secondaries.sec2.name}</h1>
-    <img src={`http://localhost:8000${this.props.defop.secondaries.sec2.img}`} />
-    </Segment>
+    {secondaries}
     </Segment.Group>
       <Segment.Group className="gadgets">
       <h1>Gadgets</h1>
-        <Segment>
-          <h1>{this.props.defop.gadgets.gad1.name}</h1>
-          <img src={`http://localhost:8000${this.props.defop.gadgets.gad1.img}`} />
-        </Segment>
-        <Segment>
-          <h1>{this.props.defop.gadgets.gad2.name}</h1>
-          <img src={`http://localhost:8000${this.props.defop.gadgets.gad2.img}`} />
-        </Segment>
+      {gadgets}
       </Segment.Group>
     </section>
     </section>
@@ -116,4 +126,4 @@ class DefOpDeatil extends Component {
   }
 }
 
-export default DefOpDeatil
+export default DefOpDetail

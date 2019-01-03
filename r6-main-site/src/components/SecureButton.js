@@ -9,7 +9,6 @@ class SecureButton extends Component {
  
  selectSecure(){
     this.props.onSelectSecure(this.props.secure)
-    console.log("YOOOO", this.props.secure )
  }
 
   render(){

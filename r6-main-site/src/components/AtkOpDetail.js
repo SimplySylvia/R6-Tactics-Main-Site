@@ -1,24 +1,53 @@
 import React, {Component} from 'react';
-import { Segment } from 'semantic-ui-react'
+import { Segment, Button, Modal } from 'semantic-ui-react'
 import { ProgressBar } from 'react-bootstrap'
 
 class AtkOpDeatil extends Component {
-  
-
   render(){
-    console.log(`here is a prop:`, this.props.atkop)
+    const baseURL = `http://localhost:8000`
+
     const SpeedRating = (this.props.atkop.SpeedRating * 33) + 1
     Math.round(SpeedRating);
     const ArmorRating = (this.props.atkop.ArmorRating * 33) + 1
     Math.round(ArmorRating);
+
     const opimg = `http://localhost:8000${this.props.atkop.img}`
     const opbadge = `http://localhost:8000${this.props.atkop.badge}`
-    var divStyle = {
+
+    let divStyle = {
       backgroundImage: `url(${opimg})`
     };
-    var gadgetimg = {
-      backgroundImage: `url(http://localhost:8000${this.props.atkop.gadget.img})`
+    let gadgetimg = {
+      backgroundImage: `url(http://localhost:8000${this.props.atkop.ability.img})`
     };
+
+    let primaries = this.props.atkop.primaries.map( (primary, i) => {
+      return (
+        <Segment>
+        <h1>{primary.name}</h1>
+        <img src={`${baseURL}${primary.img}`} />
+        </Segment>
+      )
+    })
+
+    let secondaries = this.props.atkop.secondaries.map( (secondary, i) => {
+      return (
+        <Segment>
+        <h1>{secondary.name}</h1>
+        <img src={`${baseURL}${secondary.img}`} />
+        </Segment>
+      )
+    })
+
+    let gadgets = this.props.atkop.gadgets.map( (gadget, i) => {
+      return (
+        <Segment>
+        <h1>{gadget.name}</h1>
+        <img src={`${baseURL}${gadget.img}`} />
+        </Segment>
+      )
+    })
+
     return(
 
   <div className="opPage">
@@ -49,10 +78,20 @@ class AtkOpDeatil extends Component {
           <h2 className="org">{this.props.atkop.Organization}</h2>
             
           </Segment>
+          
           <Segment className="bio">
-          <h2>Bio:</h2>
-          <p className="biostory">{this.props.atkop.bio}</p>
+
+          <Modal className="biomodal" trigger={<Button className="biobutt">Show Bio</Button>} centered={false}>
+            <Modal.Header>Bio</Modal.Header>
+            <Modal.Content>
+              <Modal.Description>
+                <p>{this.props.atkop.bio}</p>
+              </Modal.Description>
+            </Modal.Content>
+          </Modal>
+
           </Segment>
+
         </Segment.Group>
         </div>
     </section>
@@ -61,44 +100,23 @@ class AtkOpDeatil extends Component {
         <section className="uniqueability">
           <h1>Unique Ability</h1>
           <div className="gadgetimg" style={gadgetimg}>
-          <h2>{this.props.atkop.gadget.name}</h2>
+          <h2>{this.props.atkop.ability.name}</h2>
           </div>
           <Segment className="gadgetdesc">
-            <p>{this.props.atkop.gadget.desc}</p>
+            <p>{this.props.atkop.ability.desc}</p>
           </Segment>
           </section>
-    <Segment.Group className="priweapons">
+          <Segment.Group className="priweapons">
     <h1>Primary Weapons</h1>
-    <Segment>
-    <h1>{this.props.atkop.primaries.pri1.name}</h1>
-    <img src={`http://localhost:8000${this.props.atkop.primaries.pri1.img}`} />
-    </Segment>
-    <Segment>
-    <h1>{this.props.atkop.primaries.pri2.name}</h1>
-    <img src={`http://localhost:8000${this.props.atkop.primaries.pri2.img}`} />
-    </Segment>
+    {primaries}
     </Segment.Group>
     <Segment.Group className="secweapons">
     <h1>Secondary Weapons</h1>
-    <Segment>
-    <h1>{this.props.atkop.secondaries.sec1.name}</h1>
-    <img src={`http://localhost:8000${this.props.atkop.secondaries.sec1.img}`} />
-    </Segment>
-    <Segment>
-    <h1>{this.props.atkop.secondaries.sec2.name}</h1>
-    <img src={`http://localhost:8000${this.props.atkop.secondaries.sec2.img}`} />
-    </Segment>
+    {secondaries}
     </Segment.Group>
       <Segment.Group className="gadgets">
       <h1>Gadgets</h1>
-        <Segment>
-          <h1>{this.props.atkop.gadgets.gad1.name}</h1>
-          <img src={`http://localhost:8000${this.props.atkop.gadgets.gad1.img}`} />
-        </Segment>
-        <Segment>
-          <h1>{this.props.atkop.gadgets.gad2.name}</h1>
-          <img src={`http://localhost:8000${this.props.atkop.gadgets.gad2.img}`} />
-        </Segment>
+      {gadgets}
       </Segment.Group>
     </section>
     </section>

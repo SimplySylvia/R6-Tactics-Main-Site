@@ -12,14 +12,11 @@ class OpDetailContainer extends Component {
 
   componentDidMount = async() => {
     const id  = this.props.location.state.opid;
-    console.log(`here is the id`, id)
     await fetch 
     (`http://localhost:8000/api/defops/${id}`)
 
     .then(response => response.json())
     .then(info => this.setState({defop : [info.data]} ))
-    
-    console.log('here is the state of the op',this.state.defop);
   }
 
 
