@@ -1,19 +1,14 @@
 import React, {Component} from 'react';
-import { Button, Dropdown } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 
 class ToggleDraw extends Component {
-  constructor(){
-    super();
-    this.state = {
+    state = {
       togglestate: false,
       color: 'red',
     }
-    this.toggle = this.toggle.bind(this);
-    this.colorChange = this.colorChange.bind(this);
- }
  
- toggle(){
-   if (this.state.togglestate == false){
+ toggle = () => {
+   if (this.state.togglestate === false){
      this.setState({
       togglestate: true,
      })
@@ -25,7 +20,7 @@ class ToggleDraw extends Component {
     this.props.toggleCanDraw(this.state.togglestate)
  }
  
- colorChange(color){
+ colorChange = (color) => {
   this.setState({
     color: color,
   })

@@ -25,7 +25,7 @@ class AtkOpDeatil extends Component {
       return (
         <Segment>
         <h1>{primary.name}</h1>
-        <img src={`${BASEPATH}${primary.img}`} />
+        <img src={`${BASEPATH}${primary.img}`} alt='primary weapon'/>
         </Segment>
       )
     })
@@ -34,7 +34,7 @@ class AtkOpDeatil extends Component {
       return (
         <Segment>
         <h1>{secondary.name}</h1>
-        <img src={`${BASEPATH}${secondary.img}`} />
+        <img src={`${BASEPATH}${secondary.img}`} alt='secondary weapon' />
         </Segment>
       )
     })
@@ -43,7 +43,7 @@ class AtkOpDeatil extends Component {
       return (
         <Segment>
         <h1>{gadget.name}</h1>
-        <img src={`${BASEPATH}${gadget.img}`} />
+        <img src={`${BASEPATH}${gadget.img}`} alt='gadget'/>
         </Segment>
       )
     })

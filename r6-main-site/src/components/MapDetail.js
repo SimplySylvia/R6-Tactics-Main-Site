@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, Checkbox } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import MapOptions from './MapOptions';
 import MapViewer from './MapViewer';
 import ToggleDraw from './ToggleDraw';

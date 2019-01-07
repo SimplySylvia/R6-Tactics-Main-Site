@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Button, Dropdown } from 'semantic-ui-react';
 import FloorButtons from './FloorButtons';
 import BombButtons from './BombButtons';
 import SecureButtons from './SecureButtons';

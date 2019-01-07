@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import { Divider, Segment, Button, Icon, Label } from 'semantic-ui-react'
 
 class StratsContainer extends Component{
       

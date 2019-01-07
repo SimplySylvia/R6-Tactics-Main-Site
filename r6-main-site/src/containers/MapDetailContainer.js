@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import MapDetail from '../components/MapDetail'
+import {BASEPATH} from '../helper.js'
 
 class MapDetailContainer extends Component {
   constructor(){
@@ -12,8 +13,7 @@ class MapDetailContainer extends Component {
 
   componentDidMount = async() => {
     const id  = this.props.location.state.mapid;
-    await fetch 
-    (`http://localhost:8000/api/smaps/${id}`)
+    await fetch(`${BASEPATH}/api/smaps/${id}`)
 
     .then(response => response.json())
     .then(info => this.setState({map : [info.data]} ))

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, Dropdown } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import BombButton from './BombButton';
 
 class BombButtons extends Component {

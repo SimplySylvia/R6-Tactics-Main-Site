@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Button, Dropdown } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import SecureButton from './SecureButton';
 
 class SecureButtons extends Component {

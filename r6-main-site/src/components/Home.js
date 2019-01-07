@@ -18,7 +18,7 @@ class Home extends Component {
           <article className="homeheader"><h1>Welcome to R6 META</h1></article>
 
           <div className="home1">
-          <article><img src={`${BASEPATH}/images/home1.png`}/></article>
+          <article><img src={`${BASEPATH}/images/home1.png`} alt='home page hero'/></article>
           <article><h2>Experience your favorite Rainbow Six Siege operators in a whole new way.</h2>
           <Link to={'/AttackOps'}><Button className="atkbut" as='a' floated="right" primary> Attack Operators </Button></Link>
           <Link to={'/DefenseOps'}><Button className="defbut" as='a' floated="right" primary> Defense Operators </Button></Link>
@@ -29,9 +29,9 @@ class Home extends Component {
           <article>
             <h2>Get an edge on the competition by being prepared. Grow your map knowledge and aim for Diamond this next season!</h2>
             <Link to={'/Maps'}><Button as='a' floated="left" primary> Plan Your Next Game </Button></Link>
-            <img className="rankimg" src={`${BASEPATH}/images/diamond.png`}/>
+            <img className="rankimg" src={`${BASEPATH}/images/diamond.png`} alt='diamond rank image'/>
           </article>
-          <article><img src={`${BASEPATH}/images/home2.png`}/></article>
+          <article><img src={`${BASEPATH}/images/home2.png`} alt='homepage image 2'/></article>
           </div>
 
         </div>

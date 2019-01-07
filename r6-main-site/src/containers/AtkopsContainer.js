@@ -26,7 +26,6 @@ class OpsContainer extends Component{
     render(){
       return (
         <div className='opscontainer'>
-        {console.log('logged atk:',this.state.atkops)}
         <div className="AtkopsList">
         <Atkops atkops={this.state.atkops}/>
         </div>

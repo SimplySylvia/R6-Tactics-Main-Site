@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import AtkOpDetail from '../components/AtkOpDetail'
+import {BASEPATH} from '../helper.js'
 
 class OpDetailContainer extends Component {
   constructor(){
@@ -12,15 +13,11 @@ class OpDetailContainer extends Component {
 
   componentDidMount = async() => {
     const id  = this.props.location.state.opid;
-    await fetch 
-    (`http://localhost:8000/api/atkops/${id}`)
-
+    await fetch(`${BASEPATH}/api/atkops/${id}`)
     .then(response => response.json())
     .then(info => {
-      console.log(info)
       this.setState({atkop : [info.data]} )
     })
-    console.log(this.state.atkop)
   }
 
 
