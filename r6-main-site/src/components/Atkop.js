@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import {BASEPATH} from '../helper.js'
+import {BASEPATH} from '../config/constants'
 
 class Atkop extends Component {
   render(){

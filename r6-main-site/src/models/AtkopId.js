@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {BASEPATH} from '../helper.js'
+import {BASEPATH} from '../config/constants'
 
 class AtkopIdModel {
   static find(id){

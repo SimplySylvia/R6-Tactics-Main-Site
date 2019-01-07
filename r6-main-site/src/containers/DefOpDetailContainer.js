@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import DefOpDetail from '../components/DefOpDetail'
-import {BASEPATH} from '../helper.js'
+import {BASEPATH} from '../config/constants'
 
 class OpDetailContainer extends Component {
   constructor(){

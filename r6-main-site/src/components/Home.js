@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
 import {Link} from 'react-router-dom';
-import {BASEPATH} from '../helper.js'
+import {BASEPATH} from '../config/constants'
 
 class Home extends Component {
   render() {
@@ -29,9 +29,9 @@ class Home extends Component {
           <article>
             <h2>Get an edge on the competition by being prepared. Grow your map knowledge and aim for Diamond this next season!</h2>
             <Link to={'/Maps'}><Button as='a' floated="left" primary> Plan Your Next Game </Button></Link>
-            <img className="rankimg" src={`${BASEPATH}/images/diamond.png`} alt='diamond rank image'/>
+            <img className="rankimg" src={`${BASEPATH}/images/diamond.png`} alt='diamond rank'/>
           </article>
-          <article><img src={`${BASEPATH}/images/home2.png`} alt='homepage image 2'/></article>
+          <article><img src={`${BASEPATH}/images/home2.png`} alt='homepage 2'/></article>
           </div>
 
         </div>

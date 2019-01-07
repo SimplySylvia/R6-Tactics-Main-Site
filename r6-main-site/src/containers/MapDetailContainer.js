@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import MapDetail from '../components/MapDetail'
-import {BASEPATH} from '../helper.js'
+import {BASEPATH} from '../config/constants'
 
 class MapDetailContainer extends Component {
   constructor(){

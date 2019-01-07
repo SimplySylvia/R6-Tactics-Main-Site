@@ -17,9 +17,9 @@ export default (
       <Route path='/DefenseOps' component={ DefopsContainer }/>
       <Route path='/AttackOp/:name' component={ AtkOpDetailContainer }/>
       <Route path='/DefenseOp/:name' component={ DefOpDetailContainer }/>
-      <Route path='/Maps' component={MapContainer}/>
-      <Route path='/Map/:name' component={MapDetailContainer}/>
-      <Route path='/Strats' component={StratsContainer}/>
-      <Route path='/Forum' component={ForumContainer}/>
+      <Route path='/Maps' component={ MapContainer }/>
+      <Route path='/Map/:name' component={ MapDetailContainer }/>
+      <Route path='/Strats' component={ StratsContainer }/>
+      <Route path='/Forum' component={ ForumContainer }/>
   </Switch>
 )

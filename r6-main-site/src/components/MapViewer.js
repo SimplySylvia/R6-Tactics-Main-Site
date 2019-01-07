@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import GoogleMapComp from './GoogleMapComp'
-import {BASEPATH} from '../helper.js'
 
 class MapViewer extends Component {
   
   render(){
-    const floorimg = `${BASEPATH}${this.props.selectedFloor.img}`
     return(
       <section className='mapViewer'>
         <div className='map'>

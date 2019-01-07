@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Segment, Button, Modal } from 'semantic-ui-react'
 import { ProgressBar } from 'react-bootstrap'
-import {BASEPATH} from '../helper.js'
+import {BASEPATH} from '../config/constants'
 
 class DefOpDetail extends Component {
   render(){

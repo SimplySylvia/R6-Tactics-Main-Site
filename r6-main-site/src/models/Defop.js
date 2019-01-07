@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {BASEPATH} from '../helper.js'
+import {BASEPATH} from '../config/constants'
 class DefopModel {
   static all(){
     let request = axios.get(`${BASEPATH}/api/defops`)

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BASEPATH} from '../helper.js'
+import {BASEPATH} from '../config/constants'
 
 class GoogleMapComp extends Component {
     constructor() {
