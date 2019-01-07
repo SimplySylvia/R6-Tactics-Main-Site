@@ -1,8 +1,9 @@
 import axios from 'axios'
+import {BASEPATH} from '../helper.js'
 
 class MapModel {
   static all(){
-    let request = axios.get('http://localhost:8000/api/smaps')
+    let request = axios.get(`${BASEPATH}/api/smaps`)
     return request
   }
 }

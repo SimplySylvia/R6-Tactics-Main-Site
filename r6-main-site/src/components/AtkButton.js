@@ -2,14 +2,9 @@ import React, {Component} from 'react';
 import { Button, Dropdown } from 'semantic-ui-react';
 
 class AtkButton extends Component {
-  constructor(){
-    super();
-    this.selectAtk = this.selectAtk.bind(this);
- }
  
- selectAtk(){
+ selectAtk = () => {
     this.props.onSelectAtk(this.props.atk)
-    console.log("YOOOO", this.props.atk )
  }
 
   render(){

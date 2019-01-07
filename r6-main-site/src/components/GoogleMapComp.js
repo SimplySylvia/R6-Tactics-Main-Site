@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {BASEPATH} from '../helper.js'
 
 class GoogleMapComp extends Component {
     constructor() {
@@ -47,7 +48,7 @@ class GoogleMapComp extends Component {
             mapTypeIds: [this.props.selectedFloor.name]
           }
         });
-        const floorimg = `http://localhost:8000${this.props.selectedFloor.img}`
+        const floorimg = `${BASEPATH}${this.props.selectedFloor.img}`
         var MapType = new window.google.maps.ImageMapType({
             getTileUrl: function(coord, zoom) {
                 var normalizedCoord = getNormalizedCoord(coord, zoom);
@@ -144,10 +145,10 @@ class GoogleMapComp extends Component {
             })(map)
           }
 
-          var bombIcon = new window.google.maps.MarkerImage("http://localhost:8000/images/bomb.png", null, null, null, new window.google.maps.Size(43,70));
-          var secureIcon = new window.google.maps.MarkerImage("http://localhost:8000/images/securearea.png", null, null, null, new window.google.maps.Size(55,70));
-          var hostageIcon = new window.google.maps.MarkerImage("http://localhost:8000/images/hostage.png", null, null, null, new window.google.maps.Size(55,70));
-          var atkIcon = new window.google.maps.MarkerImage("http://localhost:8000/images/atk.png", null, null, null, new window.google.maps.Size(55,70));
+          var bombIcon = new window.google.maps.MarkerImage(`${BASEPATH}/images/bomb.png`, null, null, null, new window.google.maps.Size(43,70));
+          var secureIcon = new window.google.maps.MarkerImage(`${BASEPATH}/images/securearea.png`, null, null, null, new window.google.maps.Size(55,70));
+          var hostageIcon = new window.google.maps.MarkerImage(`${BASEPATH}/images/hostage.png`, null, null, null, new window.google.maps.Size(55,70));
+          var atkIcon = new window.google.maps.MarkerImage(`${BASEPATH}/images/atk.png`, null, null, null, new window.google.maps.Size(55,70));
            
           // conditional statement for bomb site 3
 

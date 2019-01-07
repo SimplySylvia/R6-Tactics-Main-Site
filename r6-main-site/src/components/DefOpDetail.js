@@ -1,31 +1,31 @@
 import React, {Component} from 'react';
 import { Segment, Button, Modal } from 'semantic-ui-react'
 import { ProgressBar } from 'react-bootstrap'
+import {BASEPATH} from '../helper.js'
 
 class DefOpDetail extends Component {
   render(){
-    const baseURL = `http://localhost:8000`
 
     const SpeedRating = (this.props.defop.SpeedRating * 33) + 1
     Math.round(SpeedRating);
     const ArmorRating = (this.props.defop.ArmorRating * 33) + 1
     Math.round(ArmorRating);
 
-    const opimg = `${baseURL}${this.props.defop.img}`
-    const opbadge = `${baseURL}${this.props.defop.badge}`
+    const opimg = `${BASEPATH}${this.props.defop.img}`
+    const opbadge = `${BASEPATH}${this.props.defop.badge}`
 
     let divStyle = {
       backgroundImage: `url(${opimg})`
     };
     let gadgetimg = {
-      backgroundImage: `url(${baseURL}${this.props.defop.ability.img})`
+      backgroundImage: `url(${BASEPATH}${this.props.defop.ability.img})`
     };
 
     let primaries = this.props.defop.primaries.map( (primary, i) => {
       return (
         <Segment>
         <h1>{primary.name}</h1>
-        <img src={`${baseURL}${primary.img}`} />
+        <img src={`${BASEPATH}${primary.img}`} />
         </Segment>
       )
     })
@@ -34,7 +34,7 @@ class DefOpDetail extends Component {
       return (
         <Segment>
         <h1>{secondary.name}</h1>
-        <img src={`${baseURL}${secondary.img}`} />
+        <img src={`${BASEPATH}${secondary.img}`} />
         </Segment>
       )
     })
@@ -43,7 +43,7 @@ class DefOpDetail extends Component {
       return (
         <Segment>
         <h1>{gadget.name}</h1>
-        <img src={`${baseURL}${gadget.img}`} />
+        <img src={`${BASEPATH}${gadget.img}`} />
         </Segment>
       )
     })

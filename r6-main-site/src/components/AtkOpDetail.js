@@ -1,31 +1,31 @@
 import React, {Component} from 'react';
 import { Segment, Button, Modal } from 'semantic-ui-react'
 import { ProgressBar } from 'react-bootstrap'
+import {BASEPATH} from '../helper.js'
 
 class AtkOpDeatil extends Component {
   render(){
-    const baseURL = `http://localhost:8000`
 
     const SpeedRating = (this.props.atkop.SpeedRating * 33) + 1
     Math.round(SpeedRating);
     const ArmorRating = (this.props.atkop.ArmorRating * 33) + 1
     Math.round(ArmorRating);
 
-    const opimg = `http://localhost:8000${this.props.atkop.img}`
-    const opbadge = `http://localhost:8000${this.props.atkop.badge}`
+    const opimg = `${BASEPATH}${this.props.atkop.img}`
+    const opbadge = `${BASEPATH}${this.props.atkop.badge}`
 
     let divStyle = {
       backgroundImage: `url(${opimg})`
     };
     let gadgetimg = {
-      backgroundImage: `url(http://localhost:8000${this.props.atkop.ability.img})`
+      backgroundImage: `url(${BASEPATH}${this.props.atkop.ability.img})`
     };
 
     let primaries = this.props.atkop.primaries.map( (primary, i) => {
       return (
         <Segment>
         <h1>{primary.name}</h1>
-        <img src={`${baseURL}${primary.img}`} />
+        <img src={`${BASEPATH}${primary.img}`} />
         </Segment>
       )
     })
@@ -34,7 +34,7 @@ class AtkOpDeatil extends Component {
       return (
         <Segment>
         <h1>{secondary.name}</h1>
-        <img src={`${baseURL}${secondary.img}`} />
+        <img src={`${BASEPATH}${secondary.img}`} />
         </Segment>
       )
     })
@@ -43,7 +43,7 @@ class AtkOpDeatil extends Component {
       return (
         <Segment>
         <h1>{gadget.name}</h1>
-        <img src={`${baseURL}${gadget.img}`} />
+        <img src={`${BASEPATH}${gadget.img}`} />
         </Segment>
       )
     })
