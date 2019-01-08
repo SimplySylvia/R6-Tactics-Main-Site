@@ -8,7 +8,6 @@ class Atkop extends Component {
 
     return(
         <div className="wrapper">
-        {/* card for op details */}
         <Link 
         to={{pathname: link, state: {opid: `${this.props.atkop._id}`}}} 
         > 
@@ -18,7 +17,6 @@ class Atkop extends Component {
             </div>
             <div className="op-card__level op-card__level"></div>
             <div className="op-card__unit-name">{this.props.atkop.name}</div>
-            {/* area to describe unique gadget */}
             <div className="op-card__unit-description">
             <img className="one-half" src={`${BASEPATH}${this.props.atkop.badge}`} alt={`${this.props.atkop.name}`}/>
             </div>

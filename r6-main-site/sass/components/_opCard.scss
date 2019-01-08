@@ -4,10 +4,11 @@
   }
   
   .wrapper {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    margin: 2em;
-  
+    margin: 0em;
+    overflow: hidden;
+    :hover{
+      transform: scale(1.1);
+    }
   }
    li {
      text-align: left;
@@ -18,7 +19,8 @@
   .op-card {
     background: whitesmoke;
     color: black;
-    width: 150px;
+    width: 24vw;
+    height: 30vh;
     display: inline-block;
     margin: auto;
     border-radius: 5px;
@@ -26,26 +28,16 @@
     text-align: center;
     box-shadow: -1px 15px 30px -12px black;
   }
-  .op-card:hover {
-    transform: scale(1.1);
-  }
   
   .op-card__image {
-    position: relative;
-    height: 100px;
-    width: 150px;
-  }
-  
-  .op-card__image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background: url(/images/r6-siege-v3-generic-bg.jpg);
-    
   }
   
   .op-card__image > img {
-    width: 190px;
-    position: absolute;    
-    top: -64px;
-    left: -22px;
+    width: 100%;
   }
   
   .op-card__level {
@@ -71,10 +63,14 @@
   }
   .op-card__unit-name {
     font-size: 2em;
+    position: relative;
+    width: 10vh;
+    background-color: whitesmoke;
     color: black;
     font-weight: 900;
     margin-bottom: 5px;
     margin-top: 10px;
+    z-index: 30;
   }
   
   .op-card__unit-stats {
@@ -82,9 +78,6 @@
     font-weight: 700;
     background: url(/images/r6-siege-v3-generic-bg.jpg);
     
-  }
-  .organization{
-    height: 100%;
   }
   .one-third {
     width: 30%;
@@ -94,25 +87,9 @@
   .one-half {
     width: 50%;
   }
-  .one-half img {
-    margin: 0 auto;
-  }
   
-  .stat {
-    position: relative;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
   
-  .stat-value {
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 12px;
-  }
   
-  .no-border {
-    border-right: none;
-  }
   
   .clearfix:after {
       visibility: hidden !important;
