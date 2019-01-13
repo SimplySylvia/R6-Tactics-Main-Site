@@ -269,20 +269,13 @@ article {
 .wrapper {
   margin: 0em;
   overflow: hidden;
-}
-.wrapper :hover {
-  transform: scale(1.1);
-}
-
-li {
-  text-align: left;
-  font-size: 1.3em;
+  width: 24vw;
 }
 
 .op-card {
   background: whitesmoke;
   color: black;
-  width: 24vw;
+  width: 100%;
   height: 30vh;
   display: inline-block;
   margin: auto;
@@ -298,9 +291,12 @@ li {
   width: 100%;
   background: url(/images/r6-siege-v3-generic-bg.jpg);
 }
-
-.op-card__image > img {
-  width: 100%;
+.op-card__image :hover {
+  transform: scale(1.1);
+}
+.op-card__image img {
+  width: 80%;
+  height: 100%;
 }
 
 .op-card__level {
@@ -318,42 +314,29 @@ li {
   margin-top: 10px;
 }
 
-ul {
-  list-style-type: none;
-}
-
-.gadget-name {
-  padding-left: 10px;
-  text-emphasis: wrap;
-  margin-top: 1em;
-}
-
 .op-card__unit-name {
-  font-size: 2em;
-  position: relative;
-  width: 10vh;
+  font-size: 2.4em;
+  position: absolute;
+  bottom: 5%;
+  left: 25%;
+  width: 70%;
+  margin: 0 auto;
   background-color: whitesmoke;
   color: black;
   font-weight: 900;
-  margin-bottom: 5px;
-  margin-top: 10px;
   z-index: 30;
-}
-
-.op-card__unit-stats {
-  color: white;
-  font-weight: 700;
-  background: url(/images/r6-siege-v3-generic-bg.jpg);
-}
-
-.one-third {
-  width: 30%;
-  float: left;
-  padding: 20px 15px;
+  padding: 0.5em;
 }
 
 .one-half {
-  width: 50%;
+  width: 30%;
+  height: 35%;
+  position: absolute;
+  z-index: 30;
+  bottom: 0;
+  left: 0;
+  background-color: whitesmoke;
+  box-shadow: 5px 0 8px -2px #2c2c2c;
 }
 
 .clearfix:after {
