@@ -5,30 +5,28 @@ class Map extends Component {
   
 
   render(){
-    const mapimg = `http://localhost:8000${this.props.map.coverimg}`
-    const link = `/Map/${this.props.map.name}`;
-    console.log(`here is the map id`,this.props.map._id);
+    const { coverimg, name, _id,} = this.props.map
+    const mapimg = `http://localhost:8000${coverimg}`
+    const link = `/Map/${name}`;
+    console.log(`here is the map id`,_id);
     let divStyle = {
       backgroundImage: `url(${mapimg})`
     };
 
     return(
-
-  <div className="mapcard">
-  {/* card for op details */}
-  <Link 
-  to={{pathname: link, state: {mapid: `${this.props.map._id}`}}} 
-  > 
-    <div className="mapcard" >
-        <div className="flip">
-          <div className="front" style={divStyle} >
-           <h1 className="text-shadow">{this.props.map.name}</h1>
+      <div className="mapcard">
+      <Link 
+      to={{pathname: link, state: {mapid: `${_id}`}}} 
+      > 
+        <div className="mapcard" >
+            <div className="flip">
+              <div className="front" style={divStyle} >
+              <h1 className="text-shadow">{name}</h1>
+              </div>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
-    </Link>{/*   end of card */}
-  </div>
-  
     )
   }
 }
