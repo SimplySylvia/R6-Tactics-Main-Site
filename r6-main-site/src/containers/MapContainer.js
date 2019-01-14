@@ -3,18 +3,13 @@ import MapModel from '../models/MapModel'
 import Maps from '../components/Maps'
 
 class MapContainer extends Component{
-    constructor(){
-        super()
-        this.state = {
-          maps: [],
-        }
+      state = {
+        maps: [],
       }
-
       componentDidMount(){
         this.fetchData()
       }
-    
-      fetchData(){
+      fetchData = () => {
         MapModel.all().then( (res) => {
           this.setState ({
             maps: res.data.data,

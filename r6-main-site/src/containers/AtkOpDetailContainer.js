@@ -3,14 +3,9 @@ import AtkOpDetail from '../components/AtkOpDetail'
 import {BASEPATH} from '../config/constants'
 
 class OpDetailContainer extends Component {
-  constructor(){
-    super()
-    this.state = {
-      atkop: [],
-    }
+  state = {
+    atkop: [],
   }
-  
-
   componentDidMount = async() => {
     const id  = this.props.location.state.opid;
     await fetch(`${BASEPATH}/api/atkops/${id}`)
@@ -19,10 +14,6 @@ class OpDetailContainer extends Component {
       this.setState({atkop : [info.data]} )
     })
   }
-
-
-
-
   render(){
     let atkop = this.state.atkop.map( (atkop, i) => {
       return (
@@ -32,12 +23,9 @@ class OpDetailContainer extends Component {
       )
     })
     return(
-
-  <div className="opDetail" >
-  {atkop}
-
-  </div>
-  
+      <div className="opDetail" >
+      {atkop}
+      </div>
     )
   }
 }

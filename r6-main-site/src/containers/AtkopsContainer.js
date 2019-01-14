@@ -3,18 +3,13 @@ import AtkopModel from '../models/Atkop'
 import Atkops from '../components/Atkops'
 
 class OpsContainer extends Component{
-    constructor(){
-        super()
-        this.state = {
+      state = {
           atkops: [],
-        }
       }
-
       componentDidMount(){
         this.fetchData()
       }
-    
-      fetchData(){
+      fetchData = () => {
         AtkopModel.all().then( (res) => {
           this.setState ({
             atkops: res.data.data,
@@ -22,14 +17,12 @@ class OpsContainer extends Component{
           })
         })
       }
-      
     render(){
       return (
         <div className='opscontainer'>
         <div className="AtkopsList">
         <Atkops atkops={this.state.atkops}/>
         </div>
-
         </div>
       )
     }

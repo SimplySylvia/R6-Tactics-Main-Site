@@ -3,25 +3,15 @@ import DefOpDetail from '../components/DefOpDetail'
 import {BASEPATH} from '../config/constants'
 
 class OpDetailContainer extends Component {
-  constructor(){
-    super()
-    this.state = {
+    state = {
       defop: [],
     }
-  }
-  
-
   componentDidMount = async() => {
     const id  = this.props.location.state.opid;
     await fetch(`${BASEPATH}/api/defops/${id}`)
-
     .then(response => response.json())
     .then(info => this.setState({defop : [info.data]} ))
   }
-
-
-
-
   render(){
     let defop = this.state.defop.map( (defop, i) => {
       return (
@@ -31,12 +21,9 @@ class OpDetailContainer extends Component {
       )
     })
     return(
-
-  <div className="opDetail" >
-  {defop}
-
-  </div>
-  
+      <div className="opDetail" >
+      {defop}
+      </div>
     )
   }
 }

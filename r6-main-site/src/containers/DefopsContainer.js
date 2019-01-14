@@ -3,18 +3,13 @@ import DefopModel from '../models/Defop'
 import Defops from '../components/Defops'
 
 class OpsContainer extends Component{
-    constructor(){
-        super()
-        this.state = {
+      state = {
           defops: [],
         }
-      }
-
       componentDidMount(){
         this.fetchData()
       }
-    
-      fetchData(){
+      fetchData = () => {
         DefopModel.all().then( (res) => {
           this.setState ({
             defops: res.data.data,
@@ -22,14 +17,12 @@ class OpsContainer extends Component{
           })
         })
       }
-      
     render(){
       return (
         <div className='opscontainer'>
         <div className="DefopsList">
         <Defops defops={this.state.defops}/>
         </div>
-
         </div>
       )
     }
