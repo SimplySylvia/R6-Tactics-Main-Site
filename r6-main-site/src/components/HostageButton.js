@@ -2,12 +2,8 @@ import React, {Component} from 'react';
 import { Button } from 'semantic-ui-react';
 
 class HostageButton extends Component {
-  constructor(){
-    super();
-    this.selectHostage = this.selectHostage.bind(this);
- }
  
- selectHostage(){
+ selectHostage = () => {
     this.props.onSelectHostage(this.props.hostage)
  }
 

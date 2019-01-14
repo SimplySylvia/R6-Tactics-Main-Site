@@ -6,7 +6,6 @@ class Atkop extends Component {
   render(){
     const { name, _id, img, badge} = this.props.atkop
     const link = `/AttackOp/${name}`;
-
     return(
         <div className="wrapper">
         <Link 

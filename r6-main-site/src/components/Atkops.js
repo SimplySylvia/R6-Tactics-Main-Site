@@ -17,7 +17,6 @@ class Atkops extends Component {
       <div className="atkHeader">
       <h3>Attack Operators</h3>
       </div>
-      
       <div className="opsList">
       <div className="ops">
         {atkopCards}

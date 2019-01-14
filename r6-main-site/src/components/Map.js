@@ -1,18 +1,15 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import {BASEPATH} from '../config/constants'
 
 class Map extends Component {
-  
-
   render(){
     const { coverimg, name, _id,} = this.props.map
-    const mapimg = `http://localhost:8000${coverimg}`
+    const mapimg = `${BASEPATH}${coverimg}`
     const link = `/Map/${name}`;
-    console.log(`here is the map id`,_id);
     let divStyle = {
       backgroundImage: `url(${mapimg})`
     };
-
     return(
       <div className="mapcard">
       <Link 

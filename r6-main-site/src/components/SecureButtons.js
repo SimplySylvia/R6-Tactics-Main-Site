@@ -5,7 +5,6 @@ import SecureButton from './SecureButton';
 class SecureButtons extends Component {
   
   render(){
-    // loop through all bombs and create a button for each 
     let saLocations = Object.values(this.props.secureareas);
     let secureButtons = saLocations.map((secureButton, i)=>{
       if (secureButton.name !== 'NA'){
@@ -13,10 +12,7 @@ class SecureButtons extends Component {
           <SecureButton key={i} onSelectSecure={this.props.onSelectSecure} className='secure' secure={secureButton} />
         )
       }
-      
     });
-    
-
     return(
       <div className='secureLocations'>
       <Button.Group>

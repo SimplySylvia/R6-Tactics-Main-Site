@@ -6,11 +6,9 @@ class AtkButton extends Component {
  selectAtk = () => {
     this.props.onSelectAtk(this.props.atk)
  }
-
   render(){
-   
     return(
-          <Button onClick={this.selectAtk}  color='orange' >{this.props.atk}</Button>
+      <Button onClick={this.selectAtk}  color='orange' >{this.props.atk}</Button>
     )
   }
 }

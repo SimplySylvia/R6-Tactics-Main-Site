@@ -3,7 +3,6 @@ import { Button } from 'semantic-ui-react';
 import BombButton from './BombButton';
 
 class BombButtons extends Component {
-  
   render(){
     let bombButtons = this.props.bombs.map((bombButton, i) => {
       if (bombButton.name !== 'NA'){
@@ -12,7 +11,6 @@ class BombButtons extends Component {
         )
       }
     });
-    
     return(
       <div className='bombLocations'>
       <Button.Group vertical>

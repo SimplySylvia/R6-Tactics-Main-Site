@@ -2,21 +2,14 @@ import React, {Component} from 'react';
 import {BASEPATH} from '../config/constants'
 
 class GoogleMapComp extends Component {
-    constructor() {
-        super();
-        this.state = {
-          zoom: 2,
-          center: {lat: 60, lng: 0},
-        }
-      }
-
+    state = {
+      zoom: 2,
+      center: {lat: 60, lng: 0},
+    }
     componentDidMount() {
         this.createMap();
-        console.log('component mounted', this.props.selectedFloor)
-
       }
-      
-      componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps) {
         if(this.props.selectedFloor !== prevProps.selectedFloor)
         {
           this.createMap();
@@ -39,7 +32,7 @@ class GoogleMapComp extends Component {
         
       } 
 
-      createMap(){
+    createMap(){
         let map = new window.google.maps.Map(document.getElementById('map'), {
           center: this.state.center,
           zoom: this.state.zoom,

@@ -5,7 +5,6 @@ import {BASEPATH} from '../config/constants'
 
 class DefOpDetail extends Component {
   render(){
-    
     const { Organization, bio, name, SpeedRating, ArmorRating, img, badge, ability, primaries, secondaries, gadgets } = this.props.defop
 
     const Speed = (SpeedRating * 33) + 1
@@ -49,7 +48,6 @@ class DefOpDetail extends Component {
         </Segment>
       )
     })
-
     return(
         <div className="opPage">
           <section className="topdetail">

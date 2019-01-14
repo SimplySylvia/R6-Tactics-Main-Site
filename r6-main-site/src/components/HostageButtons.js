@@ -5,7 +5,6 @@ import HostageButton from './HostageButton';
 class HostageButtons extends Component {
   
   render(){
-    // loop through all bombs and create a button for each 
     let hosLocations = Object.values(this.props.hostages);
     let hostageButtons = hosLocations.map((hostageButton,i)=>{
       if (hostageButton.name !== 'NA'){

@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import {BASEPATH} from '../config/constants'
 
 class Defop extends Component {
-
   render(){
     const { name, _id, img, badge} = this.props.defop
     const link = `/DefenseOp/${name}`;
@@ -24,7 +23,6 @@ class Defop extends Component {
             </div>
             </Link>
           </div> 
-  
     )
   }
 }

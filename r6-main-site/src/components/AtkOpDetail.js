@@ -48,80 +48,78 @@ class AtkOpDeatil extends Component {
         </Segment>
       )
     })
-
     return(
+      <div className="opPage">
+        <section className="topdetail atkertop">
+        <div className="backgroundOp" style={divStyle}>
+          <section className="opHeader" >
+          <p className="opHeaderName">{name}</p>
 
-  <div className="opPage">
-    <section className="topdetail atkertop">
-    <div className="backgroundOp" style={divStyle}>
-      <section className="opHeader" >
-      <p className="opHeaderName">{name}</p>
-
-      <img className="opbadgeheader" src={opbadge} alt={`${name} badge`}/>
-      </section>
-        <Segment.Group className="stats">
-          <Segment>
-          <h2>Speed</h2>
-            <ProgressBar>
-              <ProgressBar striped bsStyle="success" now={Speed} key={1} />
-              <ProgressBar striped bsStyle="danger" now={100 - Speed} key={2} />
-            </ProgressBar>
-          </Segment>
-          <Segment>
-          <h2>Armor</h2>
-            <ProgressBar>
-              <ProgressBar striped bsStyle="success" now={Armor} key={1} />
-              <ProgressBar striped bsStyle="danger" now={100 - Armor} key={2} />
-            </ProgressBar>
-          </Segment>
-          <Segment>
-          <h2>Organization:</h2>
-          <h2 className="org">{Organization}</h2>
-            
-          </Segment>
-          
-          <Segment className="bio">
-
-          <Modal className="biomodal" trigger={<Button className="biobutt">Show Bio</Button>} centered={false}>
-            <Modal.Header>Bio</Modal.Header>
-            <Modal.Content>
-              <Modal.Description>
-                <p>{bio}</p>
-              </Modal.Description>
-            </Modal.Content>
-          </Modal>
-
-          </Segment>
-
-        </Segment.Group>
-        </div>
-    </section>
-    <section className="mid-detail">
-      <section className="weapons">
-        <section className="uniqueability">
-          <h1>Unique Ability</h1>
-          <div className="gadgetimg" style={gadgetimg}>
-          <h2>{ability.name}</h2>
-          </div>
-          <Segment className="gadgetdesc">
-            <p>{ability.desc}</p>
-          </Segment>
+          <img className="opbadgeheader" src={opbadge} alt={`${name} badge`}/>
           </section>
-          <Segment.Group className="priweapons">
-    <h1>Primary Weapons</h1>
-    {primaryWeapons}
-    </Segment.Group>
-    <Segment.Group className="secweapons">
-    <h1>Secondary Weapons</h1>
-    {secondaryWeapons}
-    </Segment.Group>
-      <Segment.Group className="gadgets">
-      <h1>Gadgets</h1>
-      {Opgadgets}
-      </Segment.Group>
-    </section>
-    </section>
-  </div>
+            <Segment.Group className="stats">
+              <Segment>
+              <h2>Speed</h2>
+                <ProgressBar>
+                  <ProgressBar striped bsStyle="success" now={Speed} key={1} />
+                  <ProgressBar striped bsStyle="danger" now={100 - Speed} key={2} />
+                </ProgressBar>
+              </Segment>
+              <Segment>
+              <h2>Armor</h2>
+                <ProgressBar>
+                  <ProgressBar striped bsStyle="success" now={Armor} key={1} />
+                  <ProgressBar striped bsStyle="danger" now={100 - Armor} key={2} />
+                </ProgressBar>
+              </Segment>
+              <Segment>
+              <h2>Organization:</h2>
+              <h2 className="org">{Organization}</h2>
+                
+              </Segment>
+              
+              <Segment className="bio">
+
+              <Modal className="biomodal" trigger={<Button className="biobutt">Show Bio</Button>} centered={false}>
+                <Modal.Header>Bio</Modal.Header>
+                <Modal.Content>
+                  <Modal.Description>
+                    <p>{bio}</p>
+                  </Modal.Description>
+                </Modal.Content>
+              </Modal>
+
+              </Segment>
+
+            </Segment.Group>
+            </div>
+        </section>
+        <section className="mid-detail">
+          <section className="weapons">
+            <section className="uniqueability">
+              <h1>Unique Ability</h1>
+              <div className="gadgetimg" style={gadgetimg}>
+              <h2>{ability.name}</h2>
+              </div>
+              <Segment className="gadgetdesc">
+                <p>{ability.desc}</p>
+              </Segment>
+              </section>
+              <Segment.Group className="priweapons">
+        <h1>Primary Weapons</h1>
+        {primaryWeapons}
+        </Segment.Group>
+        <Segment.Group className="secweapons">
+        <h1>Secondary Weapons</h1>
+        {secondaryWeapons}
+        </Segment.Group>
+          <Segment.Group className="gadgets">
+          <h1>Gadgets</h1>
+          {Opgadgets}
+          </Segment.Group>
+        </section>
+        </section>
+      </div>
   
     )
   }

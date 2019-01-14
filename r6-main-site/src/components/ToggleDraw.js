@@ -27,9 +27,7 @@ class ToggleDraw extends Component {
 
   this.props.colorChoice(this.state.color)
  }
-
   render(){
-   
     return(
       <div>
           <Button onClick={this.toggle}  color='orange' >Draw</Button>

@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom';
 
 const FixedMenuLayout = () => (
   <div>
-    {/* menu section */}
     <Menu fixed='top' inverted>
       <Container>
         <Menu.Item>
@@ -13,23 +12,19 @@ const FixedMenuLayout = () => (
         <Menu.Item header as='a'><Link to={'/'}>
           R6 META
         </Link></Menu.Item>
-        {/* drop down menu */}
         <Dropdown item simple text='Community'>
           <Dropdown.Menu>
             <Dropdown.Item><Link className="subMenu" to={'/Strats'}>Strats</Link></Dropdown.Item>
             <Dropdown.Item><Link className="subMenu" to={'/Forum'}>Forum</Link></Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
-        {/* drop down operators */}
         <Dropdown item simple text='Operators'>
           <Dropdown.Menu>
             <Dropdown.Item ><Link className="subMenu" to={'/AttackOps'}>Attack Operators</Link></Dropdown.Item>
             <Dropdown.Item ><Link className="subMenu" to={'/DefenseOps'}>Defense Operators</Link></Dropdown.Item>  
           </Dropdown.Menu>
         </Dropdown>
-        {/* map menu item */}
         <Menu.Item as='a'><Link to={'/Maps'}>Maps</Link></Menu.Item>
-        {/* sign in section */}
         <Menu.Item position='right'>
         <Button as='a' primary> Sign In </Button>
         <Button as='a' primary> Sign Up </Button>

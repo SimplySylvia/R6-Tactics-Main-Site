@@ -17,7 +17,6 @@ class Defops extends Component {
       <div className="defHeader">
       <h3>Defense Operators</h3>
       </div>
-      
       <div className="opsList">
       <div className="ops">
         {defopCards}
