@@ -3,7 +3,8 @@ import Defop from './Defop'
 
 class Defops extends Component {
   render(){
-    let defops = this.props.defops.map( (defop, i) => {
+    const {defops} = this.props
+    let defopCards = defops.map( (defop, i) => {
       return (
         <Defop
           defop={defop}
@@ -19,7 +20,7 @@ class Defops extends Component {
       
       <div className="opsList">
       <div className="ops">
-        {defops}
+        {defopCards}
         </div>
         </div>
       </div>

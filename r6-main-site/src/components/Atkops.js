@@ -3,7 +3,8 @@ import Atkop from './Atkop'
 
 class Atkops extends Component {
   render(){
-    let atkops = this.props.atkops.map( (atkop, i) => {
+    const {atkops} = this.props
+    let atkopCards = atkops.map( (atkop, i) => {
       return (
         <Atkop
           atkop={atkop}
@@ -19,7 +20,7 @@ class Atkops extends Component {
       
       <div className="opsList">
       <div className="ops">
-        {atkops}
+        {atkopCards}
         </div>
         </div>
       </div>

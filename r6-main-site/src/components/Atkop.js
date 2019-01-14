@@ -4,19 +4,20 @@ import {BASEPATH} from '../config/constants'
 
 class Atkop extends Component {
   render(){
-    const link = `/AttackOp/${this.props.atkop.name}`;
+    const { name, _id, img, badge} = this.props.atkop
+    const link = `/AttackOp/${name}`;
 
     return(
         <div className="wrapper">
         <Link 
-        to={{pathname: link, state: {opid: `${this.props.atkop._id}`}}} 
+        to={{pathname: link, state: {opid: `${_id}`}}} 
         > 
           <div className="op-card">
             <div className="op-card__image op-card__image">
-              <img src={`${BASEPATH}${this.props.atkop.img}`} alt={`${this.props.atkop.name}`} />
+              <img src={`${BASEPATH}${img}`} alt={`${name}`} />
             </div>
-            <div className="op-card__unit-name">{this.props.atkop.name}</div>
-            <img className="one-half" src={`${BASEPATH}${this.props.atkop.badge}`} alt={`${this.props.atkop.name}`}/>
+            <div className="op-card__unit-name">{name}</div>
+            <img className="one-half" src={`${BASEPATH}${badge}`} alt={`${name}`}/>
           </div> 
           </Link>
         </div>

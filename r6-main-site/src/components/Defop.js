@@ -5,24 +5,25 @@ import {BASEPATH} from '../config/constants'
 class Defop extends Component {
 
   render(){
-    const link = `/DefenseOp/${this.props.defop.name}`;
+    const { name, _id, img, badge} = this.props.defop
+    const link = `/DefenseOp/${name}`;
     return(
           <div className="wrapper">
           <Link 
-          to={{pathname: link, state: {opid: `${this.props.defop._id}`}}} 
+          to={{pathname: link, state: {opid: `${_id}`}}} 
           > 
             <div className="op-card">
               <div className="op-card__image op-card__image">
-                <img src={`${BASEPATH}${this.props.defop.img}`} alt={`${this.props.defop.name}`} />
+                <img src={`${BASEPATH}${img}`} alt={`${name}`} />
               </div>
               <div className="op-card__level op-card__level"></div>
-              <div className="op-card__unit-name">{this.props.defop.name}</div>
+              <div className="op-card__unit-name">{name}</div>
               <div className="op-card__unit-description">
-              <img className="one-half" src={`${BASEPATH}${this.props.defop.badge}`} alt={`${this.props.defop.name}`}/>
+              <img className="one-half" src={`${BASEPATH}${badge}`} alt={`${name}`}/>
               </div>
             </div>
             </Link>
-          </div>
+          </div> 
   
     )
   }
