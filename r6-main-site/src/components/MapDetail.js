@@ -5,9 +5,7 @@ import MapViewer from './MapViewer';
 import ToggleDraw from './ToggleDraw';
 
 class MapDetail extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
+    state = {
       selectedFloor: '',
       selectedBomb: '',
       selectedSecure: '',
@@ -16,46 +14,38 @@ class MapDetail extends Component {
       canDraw: false,
       selectedColor: 'blue',
     }
-    this.toggleCanDraw = this.toggleCanDraw.bind(this);
-    this.onSelectFloor = this.onSelectFloor.bind(this);
-    this.onSelectBomb = this.onSelectBomb.bind(this);
-    this.onSelectSecure = this.onSelectSecure.bind(this);
-    this.onSelectAtk = this.onSelectAtk.bind(this);
-    this.onSelectHostage = this.onSelectHostage.bind(this);
-    this.colorChoice = this.colorChoice.bind(this);
-  }
 
-  toggleCanDraw(value){
+  toggleCanDraw = (value) =>{
     this.setState({
       canDraw: value,
     })
   }
 
-  colorChoice(color){
+  colorChoice = (color) => {
     this.setState({
       selectedColor: color
     })
   }
 
-  onSelectFloor(floor){
+  onSelectFloor = (floor) =>{
     this.setState({
        selectedFloor: floor
     })
   }
 
-  onSelectBomb(bomb){
+  onSelectBomb = (bomb) =>{
     this.setState({
        selectedBomb: bomb
     })
   }
 
-  onSelectSecure(secure){
+  onSelectSecure = (secure) =>{
     this.setState({
        selectedSecure: secure
     })
   }
 
-  onSelectAtk(atk){
+  onSelectAtk = (atk) => {
     this.setState({
        selectedAtk: atk
     })
@@ -115,7 +105,6 @@ class MapDetail extends Component {
       />
   </section>
   </div>
-  
     )
   }
 }
