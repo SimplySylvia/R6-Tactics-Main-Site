@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Container,Dropdown,Image,Menu,Button} from 'semantic-ui-react'
+import {Container,Dropdown,Image,Menu,Button, Modal, Segment, Form, Input} from 'semantic-ui-react'
 import {Link} from 'react-router-dom';
 
 class FixedMenuLayout extends Component {
@@ -30,7 +30,7 @@ class FixedMenuLayout extends Component {
         <Menu.Item as='a'><Link to={'/Maps'}>Maps</Link></Menu.Item>
         <Menu.Item position='right'>
         <Button as='a' primary> Profile </Button>
-        <Button as='a' primary> Logout </Button>
+        <Button as='a' primary onClick={this.props.handleLogOut}> Logout </Button>
         </Menu.Item>
       </Container>
     </Menu>
@@ -61,8 +61,60 @@ class FixedMenuLayout extends Component {
         </Dropdown>
         <Menu.Item as='a'><Link to={'/Maps'}>Maps</Link></Menu.Item>
         <Menu.Item position='right'>
-        <Button as='a' primary> Sign In </Button>
-        <Button as='a' primary> Sign Up </Button>
+
+        <Modal className="Signup" trigger={<Button primary> Sign Up </Button>} centered={false}>
+          <Modal.Header>Sign Up</Modal.Header>
+              <Modal.Content>
+                <Segment inverted>
+                  <Form inverted>
+                  <Form.Field required>
+                    <label>Email</label>
+                    <Input placeholder='Email' name='email' onChange={this.props.handleInput}/>
+                  </Form.Field>
+                  <Form.Field required>
+                    <label>Password</label>
+                    <Input type='password' placeholder='Password' name='password' onChange={this.props.handleInput}/>
+                  </Form.Field>
+                  <Form.Field required>
+                    <label>Re-enter Password</label>
+                    <Input type='password' placeholder='Password' name='password2' onChange={this.props.handleInput}/>
+                  </Form.Field>
+                  <hr/>
+                  <Form.Field required>
+                    <label>Username</label>
+                    <Input placeholder='' name='username' onChange={this.props.handleInput}/>
+                  </Form.Field>
+                  <Form.Field >
+                    <label>Uplay Account Name</label>
+                    <Input placeholder='' name='uplay' onChange={this.props.handleInput}/>
+                    <p>This will allow you to view your stats!</p>
+                  </Form.Field>
+                    <Form.Checkbox label='I agree to the Terms and Conditions' />
+                    <Button type='submit' onClick={this.props.handleSignUp}>Submit</Button>
+                  </Form>
+                </Segment>
+              </Modal.Content>
+          </Modal>
+
+          <Modal className="login" trigger={<Button primary> Log In </Button>} centered={false}>
+          <Modal.Header>Login</Modal.Header>
+              <Modal.Content>
+                <Segment inverted>
+                  <Form inverted>
+                  <Form.Field required>
+                    <label>Email</label>
+                    <Input placeholder='Email' name='email' onChange={this.props.handleInput}/>
+                  </Form.Field>
+                  <Form.Field required>
+                    <label>Password</label>
+                    <Input type='password' placeholder='Password' name='password' onChange={this.props.handleInput}/>
+                  </Form.Field>
+                    <Button type='submit' onClick={this.props.handleLogIn}>Submit</Button>
+                  </Form>
+                </Segment>
+              </Modal.Content>
+          </Modal>
+
         </Menu.Item>
       </Container>
     </Menu>
