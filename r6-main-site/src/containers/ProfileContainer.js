@@ -3,6 +3,7 @@ import axios from 'axios'
 import {AUTH} from '../config/constants'
 import moment from 'moment'
 
+
 class ProfileContainer extends Component{
     state={
       foundUser: null
@@ -13,9 +14,19 @@ class ProfileContainer extends Component{
         let foundUser = response.data.user
         this.setState({
           foundUser: foundUser
+        }, () => {
+          //find user data in r6
+          let username = this.state.foundUser.uplayAccount;
+          let platform = 'pc';
+          axios.get(`https://r6stats.com/api/player-search/${username}/${platform}`).then((response)=>{
+            console.log(response)
+          })
         })
       })
     }
+
+    
+
     render(){
       if(this.state.foundUser !== null){
         const {username, uplayAccount, dateJoined} = this.state.foundUser
