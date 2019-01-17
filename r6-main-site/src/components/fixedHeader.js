@@ -5,6 +5,17 @@ import {Link} from 'react-router-dom';
 class FixedMenuLayout extends Component {
   render(){
     if(this.props.verified){
+      let username = this.props.user.username
+
+      let divStyle = {
+        backgroundImage: `url(./images/mira.jpg)`,
+      }
+      const trigger = (
+        <div className='trigger'>
+        <p>{this.props.user.username}</p>
+          <div style={divStyle} className='image-cropper'></div><i aria-hidden="true" class="dropdown icon"></i>
+        </div>
+      )
       return(
         <div>
     <Menu fixed='top' inverted>
@@ -28,10 +39,15 @@ class FixedMenuLayout extends Component {
           </Dropdown.Menu>
         </Dropdown>
         <Menu.Item as='a'><Link to={'/Maps'}>Maps</Link></Menu.Item>
-        <Menu.Item position='right'>
-        <Button as='a' primary> Profile </Button>
-        <Button as='a' primary onClick={this.props.handleLogOut}> Logout </Button>
-        </Menu.Item>
+        
+        <Menu.Item className='profImg' position='right'>
+          <Dropdown item simple trigger={trigger} icon={null}>
+          <Dropdown.Menu>
+            <Dropdown.Item ><Link className="subMenu" to={''}>Profile</Link></Dropdown.Item>
+            <Dropdown.Item className='logout'><div className="subMenu logout" onClick={this.props.handleLogOut}>Logout</div></Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        </Menu.Item> 
       </Container>
     </Menu>
   </div>

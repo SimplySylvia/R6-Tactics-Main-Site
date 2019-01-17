@@ -29,6 +29,10 @@ body ::-webkit-scrollbar {
   color: black !important;
 }
 
+.sub {
+  height: 10vh !important;
+}
+
 i.icon {
   font-family: Icons !important;
 }
@@ -46,13 +50,37 @@ i.icon {
   max-height: 93vh;
 }
 
-.menu {
-  height: 7vh;
-  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif !important;
-}
-
 .ui .logo {
   filter: invert(100%);
+}
+
+.profImg {
+  padding: 0 !important;
+  display: flex;
+}
+
+.image-cropper {
+  width: 50px;
+  height: 6vh;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  margin: 0;
+  padding: 0;
+}
+
+.trigger {
+  display: flex;
+}
+.trigger i {
+  align-self: flex-end;
+}
+.trigger p {
+  padding: 0 0.5em !important;
+  margin: 0;
+  height: fit-content;
+  align-self: center;
 }
 
 /* Home Page */
@@ -713,6 +741,12 @@ article {
 /* Map CSS */
 #root, #app, #map {
   height: 100%;
+}
+
+/* map container */
+.profileContainer {
+  margin-top: 10vh;
+  height: 90vh;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import MyRoutes from './config/routes';
+import Routes from './config/routes';
 import FixedMenuLayout from './components/fixedHeader'
 import {AUTH} from './config/constants'
 import axios from 'axios'
 
 class App extends Component {
   state={
-    verified: false
+    verified: false,
+    user: null
   }
   componentDidMount () {
     this.verify()
@@ -60,7 +61,7 @@ class App extends Component {
       .then((response)=>{
         this.setState({
           verified: true,
-          userId: response.data.id
+          user: response.data.user
         })
       })
     } else {
@@ -80,8 +81,9 @@ class App extends Component {
           handleSignUp={this.handleSignUp}
           handleLogIn={this.handleLogIn}
           handleLogOut={this.handleLogOut}
+          user={this.state.user}
         />
-        { MyRoutes }
+        <Routes user={this.state.user}/>
       </div>
     );
   }
