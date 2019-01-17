@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {AUTH} from '../config/constants'
+import moment from 'moment'
 
 class ProfileContainer extends Component{
     state={
@@ -20,10 +21,12 @@ class ProfileContainer extends Component{
         const {username, uplayAccount, dateJoined} = this.state.foundUser
 
         let date = new Date(dateJoined)
-        console.log(date)
+        var newDate = moment(date)
         return (
           <div className='profileContainer'>
-            <h1>Coming Soon</h1>
+            <h1>{username}</h1>
+            <h1>{uplayAccount}</h1>
+            <h1>Joined: {newDate.format('MMMM YYYY')}</h1>
           </div>
       )
 
