@@ -1,18 +1,36 @@
 import React, {Component} from 'react'
+import axios from 'axios'
+import {AUTH} from '../config/constants'
 
 class ProfileContainer extends Component{
     state={
-      user: this.props.user
+      foundUser: null
     }
-    componentDidMount(){
-      console.log('mounted profile')
+    componentDidMount = async() =>{
+      let name = this.props.name
+      axios.get(`${AUTH}/users/${name}`).then((response)=>{
+        let foundUser = response.data.user
+        this.setState({
+          foundUser: foundUser
+        })
+      })
     }
     render(){
-      return (
-        <div className='profileContainer'>
-          <h1>Coming Soon</h1>
-        </div>
+      if(this.state.foundUser !== null){
+        const {username, uplayAccount, dateJoined} = this.state.foundUser
+
+        let date = new Date(dateJoined)
+        console.log(date)
+        return (
+          <div className='profileContainer'>
+            <h1>Coming Soon</h1>
+          </div>
       )
+
+      } 
+      return (<h1>No User Found</h1>)
+      
+      
     }
   }
   

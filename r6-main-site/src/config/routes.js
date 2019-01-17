@@ -52,7 +52,8 @@ class Routes extends Component {
         <Route 
           path='/profile/:name' 
           render={(props) => (
-            <ProfileContainer user={this.props.user}/>)}
+            <ProfileContainer 
+              name={props.match.params.name}/>)}
           />
         <Route 
           path='/Strats' 
