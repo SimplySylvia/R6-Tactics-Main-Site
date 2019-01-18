@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
-import {Container,Dropdown,Image,Menu,Button, Modal, Segment, Form, Input} from 'semantic-ui-react'
-import {Link} from 'react-router-dom';
+import {Container,Dropdown,Image,Menu,Button, Modal, Segment, Form, Input, Divider, Icon} from 'semantic-ui-react'
+import {Link} from 'react-router-dom'
+import Signup from './modals/Signup'
+import Login from './modals/Login'
 
 class FixedMenuLayout extends Component {
   render(){
@@ -43,7 +45,7 @@ class FixedMenuLayout extends Component {
         <Menu.Item className='profImg' position='right'>
           <Dropdown item simple trigger={trigger} icon={null}>
           <Dropdown.Menu>
-            <Dropdown.Item ><Link className="subMenu" to={''}>Profile</Link></Dropdown.Item>
+            <Dropdown.Item ><Link className="subMenu" to={`/profile/${username}`}>Profile</Link></Dropdown.Item>
             <Dropdown.Item className='logout'><div className="subMenu logout" onClick={this.props.handleLogOut}>Logout</div></Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
@@ -77,60 +79,15 @@ class FixedMenuLayout extends Component {
         </Dropdown>
         <Menu.Item as='a'><Link to={'/Maps'}>Maps</Link></Menu.Item>
         <Menu.Item position='right'>
+        <Signup 
+          handleInput={this.props.handleInput} 
+          handleSignUp={this.props.handleSignUp}
+          />
 
-        <Modal className="Signup" trigger={<Button primary> Sign Up </Button>} centered={false}>
-          <Modal.Header>Sign Up</Modal.Header>
-              <Modal.Content>
-                <Segment inverted>
-                  <Form inverted>
-                  <Form.Field required>
-                    <label>Email</label>
-                    <Input placeholder='Email' name='email' onChange={this.props.handleInput}/>
-                  </Form.Field>
-                  <Form.Field required>
-                    <label>Password</label>
-                    <Input type='password' placeholder='Password' name='password' onChange={this.props.handleInput}/>
-                  </Form.Field>
-                  <Form.Field required>
-                    <label>Re-enter Password</label>
-                    <Input type='password' placeholder='Password' name='password2' onChange={this.props.handleInput}/>
-                  </Form.Field>
-                  <hr/>
-                  <Form.Field required>
-                    <label>Username</label>
-                    <Input placeholder='' name='username' onChange={this.props.handleInput}/>
-                  </Form.Field>
-                  <Form.Field >
-                    <label>Uplay Account Name</label>
-                    <Input placeholder='' name='uplay' onChange={this.props.handleInput}/>
-                    <p>This will allow you to view your stats!</p>
-                  </Form.Field>
-                    <Form.Checkbox label='I agree to the Terms and Conditions' />
-                    <Button type='submit' onClick={this.props.handleSignUp}>Submit</Button>
-                  </Form>
-                </Segment>
-              </Modal.Content>
-          </Modal>
-
-          <Modal className="login" trigger={<Button primary> Log In </Button>} centered={false}>
-          <Modal.Header>Login</Modal.Header>
-              <Modal.Content>
-                <Segment inverted>
-                  <Form inverted>
-                  <Form.Field required>
-                    <label>Email</label>
-                    <Input placeholder='Email' name='email' onChange={this.props.handleInput}/>
-                  </Form.Field>
-                  <Form.Field required>
-                    <label>Password</label>
-                    <Input type='password' placeholder='Password' name='password' onChange={this.props.handleInput}/>
-                  </Form.Field>
-                    <Button type='submit' onClick={this.props.handleLogIn}>Submit</Button>
-                  </Form>
-                </Segment>
-              </Modal.Content>
-          </Modal>
-
+        <Login 
+          handleInput={this.props.handleInput}
+          handleLogIn={this.props.handleLogIn}
+        />
         </Menu.Item>
       </Container>
     </Menu>

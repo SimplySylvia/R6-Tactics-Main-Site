@@ -83,6 +83,45 @@ i.icon {
   align-self: center;
 }
 
+.modal {
+  max-height: fit-content;
+  max-width: fit-content;
+}
+.modal .header {
+  text-align: center;
+  font-size: 2.5em !important;
+}
+.modal .signupForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modal .signupForm form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+.modal .signupForm form hr {
+  color: white;
+}
+.modal .signupForm .signInfo {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  align-items: center;
+  justify-content: center;
+}
+.modal .loginForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modal .loginForm form {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+
 /* Home Page */
 .home {
   margin-top: 7vh;
